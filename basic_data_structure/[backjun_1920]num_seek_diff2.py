@@ -1,0 +1,17 @@
+# https://www.acmicpc.net/problem/1920
+# 해시,배열,구현문제
+
+n = int(input())
+array = list(map(int, input().split()))
+m = int(input())
+x = list(map(int, input().split()))
+
+for i in x:
+    if i in array:
+        print('1')
+    else:
+        print('0')
+
+'''
+
+'''
