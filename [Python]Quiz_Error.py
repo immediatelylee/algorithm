@@ -12,3 +12,9 @@ foo('abc')
 
 # 출력:
 # wow
+
+# 답
+# try:
+#     raise UnboundLocalError
+# except UnboundLocalError:
+#     print('wow')

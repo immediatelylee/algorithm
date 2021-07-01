@@ -4,7 +4,7 @@ class Reader:
         self.is_done = False
 
     def read_char(self):
-        # 이곳에 들어갈 코드를 작성하세요
+        # pass를 지우고 이곳에 들어갈 코드를 작성하세요
         pass
 
         # day3.txt 내용:
