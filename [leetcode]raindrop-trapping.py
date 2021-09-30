@@ -1,7 +1,7 @@
 # 1 two point
 from typing import List
 
-height = [5, 2, 0, 3, 2, 3]
+height = [2, 1, 3, 0, 1, 2]
 # height = [4, 2, 0, 3, 2, 5]
 if not height:
     print(0)
