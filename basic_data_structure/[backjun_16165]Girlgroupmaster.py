@@ -3,7 +3,6 @@
 team_num, problems = map(int, input().split())
 team, member = dict(), dict()
 
-
 for i in range(team_num):
     team_name = input()
     team[team_name] = []
