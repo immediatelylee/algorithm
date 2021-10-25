@@ -1,6 +1,7 @@
 # https://leetcode.com/problems/remove-duplicate-letters/
 
 # 미완성  왜 ! return을 안하냐고!
+# print(removeDuplicateLetters(s)) 이런식으로 출력해야함.
 s = 'cbacdcbc'
 
 
@@ -14,9 +15,8 @@ def removeDuplicateLetters(s: str) -> str:
     return ''
 
 
-removeDuplicateLetters(s)
+print(removeDuplicateLetters(s))
 
-# Solution.removeDuplicateLetters(Solution, s)
 
 # class Solution:
 #     def removeDuplicateLetters(self, s: str) -> str:
