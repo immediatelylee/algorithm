@@ -1,4 +1,4 @@
-
+# https://www.acmicpc.net/problem/4195
 def find(x):
     if x == parent[x]:
         return x
