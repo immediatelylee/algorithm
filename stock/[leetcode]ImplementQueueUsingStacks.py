@@ -21,3 +21,23 @@ class MyQueue:
 
     def empty(self):
         return self.input == [] and self.output == []
+
+
+class MyQueue1:
+    def __init__(self):
+        self.input = []
+
+    def push(self, x):
+        self.input.append(x)
+
+    def pop(self):
+
+        return self.input.pop(0)
+
+    def peek(self):
+        # output이 없으면 모두 재입력
+
+        return self.input[0]
+
+    def empty(self):
+        return self.input == []
