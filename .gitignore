@@ -4,3 +4,4 @@ stock.py
 stock/stock.py
 GH.py
 test.py
+stock/scraper.py
