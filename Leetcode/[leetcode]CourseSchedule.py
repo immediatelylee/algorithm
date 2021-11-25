@@ -34,7 +34,8 @@ from typing import List
 
 numCourses = 2
 # prerequisites = [[1, 0]]
-prerequisites = [[1, 0], [0, 1]]
+# prerequisites = [[1, 0], [0, 1]]
+prerequisites = [[1, 0], [2, 1], [3, 2], [5, 1]]
 
 
 def canFinish(numCourses: int, prerequisites: List[List[int]]) -> bool:
