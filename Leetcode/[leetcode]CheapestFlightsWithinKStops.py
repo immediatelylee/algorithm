@@ -6,6 +6,7 @@ from typing import List
 import sys
 
 '''
+https://github.com/onlybooks/algorithm-interview/issues/104
 기존 코드에서 추가한 내용입니다.
 
 weight
