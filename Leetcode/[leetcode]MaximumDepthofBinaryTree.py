@@ -2,6 +2,10 @@ import collections
 
 
 # Definition for a binary tree node.
+
+root = [3, 9, 20, None, None, 15, 7]
+
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -27,3 +31,16 @@ class Solution:
                     queue.append(cur_root.right)
         # BFS 반복 횟수 == 깊이
         return depth
+
+
+root = TreeNode(3)
+root.left = TreeNode(9)
+root.right = TreeNode(20)
+root.left.left = TreeNode(None)
+root.left.right = TreeNode(None)
+root.right.left = TreeNode(15)
+root.right.right = TreeNode(7)
+
+
+test = Solution()
+print(test.maxDepth(root))
