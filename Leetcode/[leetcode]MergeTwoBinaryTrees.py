@@ -13,18 +13,18 @@ class TreeNode:
 
 
 # TestCase
-# root1 = TreeNode(1)
-# root1.left = TreeNode(3)
-# root1.right = TreeNode(2)
-# root1.left.left = TreeNode(5)
+root1 = TreeNode(1)
+root1.left = TreeNode(3)
+root1.right = TreeNode(2)
+root1.left.left = TreeNode(5)
 
-# root2 = TreeNode(2)
-# root2.left = TreeNode(1)
-# root2.right = TreeNode(3)
-# root2.left.left = TreeNode(None)
-# root2.left.right = TreeNode(4)
-# root2.right.left = TreeNode(None)
-# root2.right.right = TreeNode(7)
+root2 = TreeNode(2)
+root2.left = TreeNode(1)
+root2.right = TreeNode(3)
+root2.left.left = TreeNode(None)
+root2.left.right = TreeNode(4)
+root2.right.left = TreeNode(None)
+root2.right.right = TreeNode(7)
 
 
 class Solution:
