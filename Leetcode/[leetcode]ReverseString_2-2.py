@@ -5,10 +5,10 @@ s = ["h", "e", "l", "l", "o"]
 
 class Solution:
     def reverseString(self, s: List[str]) -> None:
+        # 공간복잡도가 (1) 이여야하므로 
+        s[:] = s[::-1]
 
-        word = s[::-1]
-
-        return word
+        return s
 
 
 test = Solution()
