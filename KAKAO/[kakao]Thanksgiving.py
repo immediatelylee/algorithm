@@ -2,6 +2,12 @@
 
 import datetime
 
+lines = \
+    [
+        "2016-09-15 01:00:04.001 2.0s",
+        "2016-09-15 01:00:07.000 2s"
+    ]
+
 
 def solution(lines: str) -> int:
     # 로그의 시작, 종료 시각 저장
@@ -29,3 +35,7 @@ def solution(lines: str) -> int:
         accumulated += elem1[1]
 
     return max_requests
+
+
+test = solution(lines)
+print(test)
