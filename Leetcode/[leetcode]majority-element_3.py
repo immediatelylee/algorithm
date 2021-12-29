@@ -1,6 +1,7 @@
 # https://leetcode.com/problems/majority-element
 from typing import List
 import collections
+nums = [2, 2, 1, 1, 1, 2, 2]
 
 
 class Solution:
@@ -16,3 +17,7 @@ class Solution:
         b = self.majorityElement(nums[half:])
 
         return [b, a][nums.count(a) > half]
+
+
+test = Solution()
+print(test.majorityElement(nums))
