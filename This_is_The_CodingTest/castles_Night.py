@@ -12,7 +12,7 @@ for xx, yy in move:
     xx += start_point[0]
     yy += start_point[1]
     if xx < 1 or yy < 1 or xx > 9 or yy > 9:
-        pass
+        continue
     else:
         count += 1
 
