@@ -2,6 +2,7 @@
 from typing import List
 
 expression = "2*3-4*5"
+# expression = "2-1-1"
 
 
 class Solution:
