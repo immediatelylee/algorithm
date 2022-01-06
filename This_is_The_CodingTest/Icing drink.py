@@ -1,10 +1,13 @@
-import time
+from timeit import default_timer as timer
+from datetime import timedelta
+
+
 N, M = map(int, input().split())
 check = [[0]*M for i in range(N)]
 drink = [list(map(int, input())) for i in range(N)]
 
 count = 0
-start = time.time()
+start = timer()
 
 
 def dfs(x, y):  # list out of range주의
@@ -27,4 +30,5 @@ for i in range(N):
             count += 1
 
 print(count)
-print(time.time()-start)
+end = timer()
+print(timedelta(seconds=end-start))
