@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/minimum-window-substring/
 
 import collections
+s = "ADOBECODEBANC"
+t = "ABC"
 
 
 class Solution:
@@ -29,3 +31,7 @@ class Solution:
                     left += 1
 
         return s[start:end]
+
+
+test = Solution()
+print(test.minWindow(s, t))

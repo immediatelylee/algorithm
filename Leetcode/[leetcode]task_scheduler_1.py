@@ -19,15 +19,13 @@ class Solution:
 
             # 개수 순 추출
             for task, _ in counter.most_common(n+1):
-                print(counter.most_common(n+1))
-                # in most_common(n+1) 이므로 처음에는 A가 task
+
                 sub_count += 1
                 result += 1
 
                 counter.subtract(task)
                 # 0이하인 아이템을 목록에서 완전히 제거
                 counter += collections.Counter()
-                print(collections.Counter())
 
             if not counter:
                 break
