@@ -7,3 +7,7 @@ class Solution:
             return nums.index(target)
         except ValueError:
             return -1
+
+
+test = Solution()
+print(test.search(nums, target))
