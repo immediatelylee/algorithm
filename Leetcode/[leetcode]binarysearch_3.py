@@ -10,3 +10,7 @@ class Solution:
             return index
         else:
             return -1
+
+
+test = Solution()
+print(test.search(nums, target))
