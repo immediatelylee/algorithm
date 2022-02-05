@@ -44,7 +44,7 @@ public class ArrayStack {
     }
 }
 
-public class StackClient {
+public class StackClient_2_4 {
     public static void main(String[] args) {
         ArrayStack st = new ArrayStack(10);
         st.itemArray[++st.top] = 20;
