@@ -9,6 +9,12 @@ class ListNode:
         self.val = val
         self.next = next
 
+    def add(val):
+        ListNode = head
+        while ListNode.next:
+            ListNode = ListNode.next
+        ListNode.next = ListNode(val)
+
 
 # case1
 head = [1, 2, 3, 4, 5]
