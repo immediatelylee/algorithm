@@ -14,5 +14,8 @@ for i in move:
             nx = x + dx[j]
             ny = y + dy[j]
 
-        if nx < 1 or ny < 1 or nx > N or ny > N:
-            continue
+    if nx < 1 or ny < 1 or nx > N or ny > N:
+        continue
+
+# NameError: name 'nx' is not defined 이게 왜 나오지? 들여쓰기가 두번째 for문이 아니라 첫번째 for문에 있어야 했다.
+# if nx < 1.... 가 첫번째 for문에 있게 되면 정상처리됨
