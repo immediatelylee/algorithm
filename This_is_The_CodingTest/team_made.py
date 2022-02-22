@@ -26,4 +26,7 @@ for i in range(m):
     if oper == 0:
         union_parent(parent, a, b)
     elif oper == 1:
-        if find_parent(parent, a) == find_parent(parent, b)
+        if find_parent(parent, a) == find_parent(parent, b):
+            print('YES')
+        else:
+            print('NO')
