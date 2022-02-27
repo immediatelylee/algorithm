@@ -1,7 +1,8 @@
 import heapq
-food_times = [3, 1, 2]
-k = 5
-
+# food_times = [3, 1, 2]
+# k = 5
+food_times = [8,6,4]
+k = 15
 
 def solution(food_times, k):
     if sum(food_times) <= k:
@@ -22,7 +23,7 @@ def solution(food_times, k):
     # (8-1) (6-2) (4-3)   다먹는시간 - 음식번호 가 주어졌다면 
     # 최소힙에의해서 (4-3)이 상단이 있고  이를 다먹는시간은 4*3 = 12 이다. 
     # (한음식을 다 먹는시간)* 다른음식을 번갈아먹는 횟수(len(음식))
-    
+
 
     while sum_value + ((q[0][0] - previous) * length) <= k:
         now = heapq.heappop(q)[0]
