@@ -1,69 +1,57 @@
-n, m = map(int, input().split())
-data = []  # 초기 맵 리스트
-temp = [[0] * m for _ in range(n)]  # 벽을 설치한 뒤의 맵 리스트
+# input 및 변수선언
 
-for _ in range(n):
-    data.append(list(map(int, input().split())))
+import copy
+import sys
 
-# 4가지 이동 방향에 대한 리스트
-dx = [-1, 0, 1, 0]
-dy = [0, 1, 0, -1]
+input = sys.stdin.readline
 
-result = 0
+N, M = map(int, input().strip().split())
+NM = []
+for i in range(N):
+    L = list(map(int, input().strip().split()))
+    NM.append(L)
 
-# 깊이 우선 탐색(DFS)을 이용해 각 바이러스가 사방으로 퍼지도록 하기
+dr = [-1, 0, 1, 0]  # 위아래 row 단위로 이동
+dc = [0, 1, 0, -1]  # 좌우 column 단위로 이동
 
+max_value = 0  # clean 지역의 개수를 return 하기 위한 변수
 
-def virus(x, y):
-    for i in range(4):
-        nx = x + dx[i]
-        ny = y + dy[i]
-        # 상, 하, 좌, 우 중에서 바이러스가 퍼질 수 있는 경우
-        if nx >= 0 and nx < n and ny >= 0 and ny < m:
-            if temp[nx][ny] == 0:
-                # 해당 위치에 바이러스 배치하고, 다시 재귀적으로 수행
-                temp[nx][ny] = 2
-                virus(nx, ny)
-
-# 현재 맵에서 안전 영역의 크기 계산하는 메서드
+# 벽 선택하기
 
 
-def get_score():
-    score = 0
-    for i in range(n):
-        for j in range(m):
-            if temp[i][j] == 0:
-                score += 1
-    return score
+def select_wall(start, count):
+    global max_value
+    if count == 3:  # 종료조건, 벽 3개 선택 완료
+        sel_NM = copy.deepcopy(NM)  # deepcopy로 벽이 선택된 배열 복사
+        for r in range(N):  # 바이러스 퍼트리기
+            for c in range(M):
+                spread_virus(r, c, sel_NM)
+        safe_counts = sum(i.count(0) for i in sel_NM)  # clean 지역 count
+        max_value = max(max_value, safe_counts)
+        return True
 
-# 깊이 우선 탐색(DFS)을 이용해 울타리를 설치하면서, 매 번 안전 영역의 크기 계산
-
-
-def dfs(count):
-    global result
-    # 2. 울타리가 3개 설치된 경우 바이러스 전파
-    if count == 3:
-        for i in range(n):
-            for j in range(m):
-                temp[i][j] = data[i][j]
-        # 각 바이러스의 위치에서 전파 진행
-        for i in range(n):
-            for j in range(m):
-                if temp[i][j] == 2:
-                    virus(i, j)
-        # 3. 안전 영역의 최대값 계산
-        result = max(result, get_score())
-        return
-    # 1. 빈 공간에 울타리를 설치
-    for i in range(n):
-        for j in range(m):
-            if data[i][j] == 0:
-                data[i][j] = 1
-                count += 1
-                dfs(count)
-                data[i][j] = 0
-                count -= 1
+    else:
+        for i in range(start, N*M):  # 2차원 배열에서 조합 구하기
+            r = i // M
+            c = i % M
+            if NM[r][c] == 0:  # 안전영역인 경우 벽으로 선택가능
+                NM[r][c] = 1  # 벽으로 변경
+                select_wall(i, count+1)  # 벽선택
+                NM[r][c] = 0
 
 
-dfs(0)
-print(result)
+def spread_virus(r, c, sel_NM):
+    if sel_NM[r][c] == 2:
+        # 상하좌우 4방향을 확인하고 범위를 벗어나거나, 벽을만날때까지 반복
+        for dir in range(4):
+            n_r = r+dr[dir]
+            n_c = c+dc[dir]
+            if n_r >= 0 and n_c >= 0 and n_r < N and n_c < M:  # 범위를 벗어나지 않을때
+                if sel_NM[n_r][n_c] == 0:
+                    sel_NM[n_r][n_c] = 2
+                    spread_virus(n_r, n_c, sel_NM)
+
+
+# 메인
+select_wall(0, 0)
+print(max_value)
