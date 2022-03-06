@@ -1,5 +1,7 @@
 # ' 균형잡힌 괄호 문자열'의 인덱스 반환
-from tabnanny import check
+p = ")("
+
+# 균형잡힌 괄호 문자열 인덱스 반환
 
 
 def balanced_index(p):
@@ -38,5 +40,19 @@ def solution(p):
     if check_proper(u):
         answer = u + solution(v)
     # 올바른 괄호 문자열' 이 아니라면 아래의 과정 수행
-
+    else:
+        answer = '('
+        answer += solution(v)
+        answer += ')'
+        u = list(u[1:-1])  # 첫 번째와 마지막 문자를 제거
+        for i in range(len(u)):
+            if u[i] == '(':
+                u[i] = ')'
+            else:
+                u[i] = '('
+        answer += "".join(u)
     return answer
+
+
+test = solution(p)
+print(test)
