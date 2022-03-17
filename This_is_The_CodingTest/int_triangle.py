@@ -1,4 +1,4 @@
-from tkinter.font import nametofont
+
 
 
 n = int(input())
