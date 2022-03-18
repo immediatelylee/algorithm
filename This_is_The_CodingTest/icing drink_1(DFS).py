@@ -4,6 +4,7 @@ for i in range(n):
     map_data.append(list(input()))
 
 
+
 def dfs(x, y):
     if x < 0 or y < 0 or x >= n or y >= m or map_data[x][y] == '1':
         return
