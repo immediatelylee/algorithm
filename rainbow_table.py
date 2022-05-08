@@ -1,8 +1,8 @@
 from hashlib import sha1
 
-f = open("list.csv", 'w')
+f = open("list1.csv", 'w')
 
-for i in range(10000000, 99999999):
+for i in range(16593497, 99999999):
 
     result = str(i) + "salt_for_you"
 
