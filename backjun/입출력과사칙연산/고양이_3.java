@@ -1,0 +1,9 @@
+// https://www.acmicpc.net/problem/10171
+public class 고양이_3 {
+    public static void main(String[] args) {
+        System.out.println("\\    /\\");
+        System.out.println(" )  ( \')");
+        System.out.println("(  /  )");
+        System.out.println(" \\(__)|");
+    }
+}
