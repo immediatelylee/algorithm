@@ -1,4 +1,3 @@
-package backjun.conditional_statement(jogunmoon)_2;
 
 import java.io.BufferedReader;
 import java.io.IOException;

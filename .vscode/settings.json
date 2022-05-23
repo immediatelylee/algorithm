@@ -1,9 +1,10 @@
 {
     "java.project.sourcePaths": [
-        "backjun/bruteforce_10",
-        "backjun/loop_3",
-        "backjun/input_output_1",
-        "backjun/conditional_statement(jogunmoon)_2"
+        "backjun/a_10_bruteforce",
+        "backjun/a_3_loop",
+        "backjun/a_1_input_output",
+        "backjun/a_2_conditional_statement(jogunmoon)",
+        "backjun/a_18_greedy"
 
     ]
 }
