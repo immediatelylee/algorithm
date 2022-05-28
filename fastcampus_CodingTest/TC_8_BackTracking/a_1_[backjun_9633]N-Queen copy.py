@@ -1,3 +1,5 @@
+# 시간초과  n의 범위가 15까지여서 pyhton으로 풀면 모두 시간초과 나는듯. 
+# 사람들 15까지의 정답을 그냥 리스트에 담아서 print하는식으로 통과함
 # https://www.acmicpc.net/problem/9663
 def check(x):
     for i in range(x):
