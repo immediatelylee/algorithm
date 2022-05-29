@@ -1,3 +1,3 @@
-algorithms
+# algorithms
 
-Solving algorithm problems with Python and Java
+## Solving algorithm problems with Python and Java
