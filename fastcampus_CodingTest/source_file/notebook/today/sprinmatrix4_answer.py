@@ -1,0 +1,56 @@
+from copy import deepcopy
+
+N, M, K = map(int, input().split())
+A = [list(map(int, input().split())) for _ in range(N)]
+Q = [tuple(map(int, input().split())) for _ in range(K)]
+dx, dy = [1, 0, -1, 0], [0, -1, 0, 1]
+cnt = 0
+
+ans = 10000
+
+
+def value(arr):
+    return min([sum(i) for i in arr])
+
+
+def convert(arr, qry):
+
+    (r, c, s) = qry
+    r, c = r-1, c-1
+    new_arr = deepcopy(arr)
+    for i in range(1, s+1):
+        rr, cc = r-i, c+i
+        for w in range(4):
+            for d in range(i*2):
+                rrr, ccc = rr + dx[w], cc + dy[w]
+                new_arr[rrr][ccc] = arr[rr][cc]
+                rr, cc = rrr, ccc
+    return new_arr
+
+
+def dfs(arr, qry):
+    global ans
+    if sum(qry) == K:
+        ans = min(ans, value(arr))
+        return
+    for i in range(K):
+        if qry[i]:
+            continue
+        new_arr = convert(arr, Q[i])
+        qry[i] = 1
+        dfs(new_arr, qry)
+        qry[i] = 0
+
+
+dfs(A, [0 for i in range(K)])
+print(ans)
+
+# 쿼리를 처리할때 비트마스크라는 방법을쓴다.
+# 1 2 3 4 5
+# [135]  -> 시간복잡도 N^2  1있는지 확인 3 있는지 확인 ....
+# set 을 써도 마찬가지
+
+# 비트 마스크는 숫자를 이진수로 처리한다.
+# 1 2 5   -> 10011  O(N)
+
+# 시간 복잡도 50*50*6*720
