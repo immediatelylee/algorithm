@@ -1,4 +1,5 @@
 {
+    
     "java.project.sourcePaths": [
         "backjun/a_10_bruteforce",
         "backjun/a_3_loop",
@@ -8,4 +9,5 @@
         "fastcampus_CodingTest/TC_5_DP",
         "fastcampus_CodingTest/TC_6_Graph"
     ]
+    
 }
