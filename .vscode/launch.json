@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch a_2_backjun_1697_hide_seek",
+            "request": "launch",
+            "mainClass": "a_2_backjun_1697_hide_seek",
+            "projectName": "algorithm_7acb8043"
+        },
+        {
+            "type": "java",
             "name": "Launch gugudan_1",
             "request": "launch",
             "mainClass": "gugudan_1",
@@ -15,9 +22,8 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "${file} input.txt" ,
+            "program": "${file} input.txt",
             "console": "integratedTerminal",
-
             "justMyCode": true
         }
     ]
