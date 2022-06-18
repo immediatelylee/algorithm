@@ -9,5 +9,5 @@ test.py
 /stock
 list.csv
 
-input.txt
-output.txt
+./input.txt
+./output.txt
