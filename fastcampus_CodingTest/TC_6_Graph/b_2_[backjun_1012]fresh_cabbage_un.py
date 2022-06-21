@@ -1,27 +1,35 @@
 # https://www.acmicpc.net/problem/1012
 
-t= int(int(input()))
-m,n,k = map(int,input().split())
-cabbage = [[0 for _ in range(m)] for _ in range(n)]
-count = 0
-check = [[0 for _ in range(m)] for _ in range(n)]
 
-dx=[-1,1,0,0]
-dy = [0,0,1,-1]
+import sys
+sys.setrecursionlimit(100000)
+
 
 def dfs(x, y):
-    if x < 0 or y < 0 or x >= n or y >= m or cabbage[x][y] == '0' :
-        return
+    visited[x][y] = True
+    directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
-    map_data[x][y] = '1'
-    dfs(x-1, y)
-    dfs(x+1, y)
-    dfs(x, y-1)
-    dfs(x, y+1)
+    for dx, dy in directions:
+        nx, ny = x + dx, y + dy
+        if nx < 0 or nx >= n or ny < 0 or ny >= m:
+            continue
+        if array[nx][ny] and not visited[nx][ny]:
+            dfs(nx, ny)
 
 
+for _ in range(int(input())):
+    m, n, k = map(int, input().split())
+    array = [[0] * m for _ in range(n)]
+    visited = [[False] * m for _ in range(n)]
 
-for _ in range(k):
-    xx,yy = map(int,input().split())
-    gabbage[xx][yy]=1
-    check[xx][yy]=1
+    for _ in range(k):
+        y, x = map(int, input().split())
+        array[x][y] = 1
+        result = 0
+
+    for i in range(n):
+        for j in range(m):
+            if array[i][j] and not visited[i][j]:
+                dfs(i, j)
+                result += 1
+    print(result)
