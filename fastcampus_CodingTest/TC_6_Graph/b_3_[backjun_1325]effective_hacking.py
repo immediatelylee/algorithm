@@ -1,5 +1,10 @@
 # https://www.acmicpc.net/problem/1325
 
+# 시
+# 간
+# 초
+# 과
+
 from collections import deque
 
 
