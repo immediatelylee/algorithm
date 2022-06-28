@@ -37,3 +37,17 @@ for _ in range(int(input())):
                 max_distance = i
 
 print(count, max_distance)
+
+# input
+# 2
+# 3 2 2
+# 2 1 5
+# 3 2 5
+# 3 3 1
+# 2 1 2
+# 3 1 8
+# 3 2 4
+
+# outpuy
+# 2 5
+# 3 6
