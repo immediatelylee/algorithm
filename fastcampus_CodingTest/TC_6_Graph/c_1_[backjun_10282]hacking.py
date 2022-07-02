@@ -35,8 +35,7 @@ for _ in range(int(input())):
             count += 1
             if i > max_distance:
                 max_distance = i
-
-print(count, max_distance)
+    print(count, max_distance)
 
 # input
 # 2
