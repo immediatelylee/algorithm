@@ -17,7 +17,7 @@ def bfs(x,y):
         x,y = q.popleft()
       
 def turn_left_90degree(x,y):
-    
+    pass
 
 
 n, m = map(int, input().split())
