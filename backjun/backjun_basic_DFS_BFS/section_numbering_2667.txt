@@ -1,44 +1,32 @@
-from collections import deque
+이전 미로탈출 코드를 응용해서 할려고 했는데 조금 괘가 달랐음. 
 
-n = int(input())
-
-section_map = []
-for _ in range(n):
-    section_map.append(list(map(int,input())))
-
-dx = [-1, 1, 0, 0]
-dy = [0, 0, -1, 1]
-answer =[]
-
+visited를 만들지 않고 (이전 미로탈출에서도 안만들었음)
+방문한곳을 0 으로 만들며
 
 def bfs(x,y):
     q = deque()
     q.append((x,y))
-    section_map[x][y] = 0
-    cnt = 1
-
     while q:
         x,y = q.popleft()
-        for i in range(4):
-            nx = x + dx[i]
-            ny = y + dy[i]
-            
-            if 0 <= nx < n and 0 <= ny < n and section_map[nx][ny] == 1:
+        section_map[x][y] =0
+        cnt = 1
+
+    .....
+    이런식으로 초기화를 하고 4방면으로 bfs하는 구문을 만든다. 
+    4방면은 dx,dy 
+    map을 벗어나는것은 제외하는것을 or 로 continue로 띄는 것이 아닌
+    그냥 and문으로 그것을 제외한것만 적용한다. 
+                if 0 <= nx < n and 0 <= ny < n and section_map[nx][ny] == 1:
                 section_map[nx][ny] = 0
                 q.append((nx, ny))
                 cnt+=1
-    
-    return cnt
 
+
+첫째줄에는 총단지수를 구해야 하니 print(len(answer))
+둘째줄 부터 단지내 가구수를 오름차순으로 정렬해야 하므로 sort이후에 for문으로 돌리면서 bfs를 수행한다.
 for i in range(n):
     for j in range(n):
-        if section_map[i][j] == 1:
-            answer.append(bfs(i,j))
-
-answer.sort()
-print(len(answer))
-for i in answer:
-    print(i)
+        answer.append(bfs(i,j))
 
 
 
