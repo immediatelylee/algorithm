@@ -29,13 +29,13 @@ def dijkstra(start):
             if cost < distance[node_index]:
                 distance[node_index] = cost
                 heapq.heappush(q, (cost, node_index))
-
+    # 시작점이 start인 전체 거리 리스트를 반환
     return distance
 
 
 result = 0
 for i in range(1, n+1):
-    # dijkstra(시작점)
+    # dijkstra(시작점) -> 시작점으로부터 갈수 있는 노드의 거리 리스트 반환
     go = dijkstra(i)
     back = dijkstra(x)
     result = max(result, go[x]+back[i])
