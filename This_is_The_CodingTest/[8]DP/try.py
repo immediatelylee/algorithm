@@ -1,12 +1,17 @@
-n = int(input())
-storage = list(map(int, input().split()))
+n, m = map(int, input().split())
+money_type = []
+for i in range(n):
+    money_type.append(int(input()))
 
-dp = [0 for _ in range(n+1)]
+dp = [10001 for i in range(m+1)]
+dp[0] = 0
 
-# ai = max(ai-2 +k, ai-1)
-dp[0] = storage[0]
-dp[1] = max(storage[0], storage[1])
-for i in range(2, n):
-    dp[i] = max(d[i-2]+storage[i], dp[i-1])
+for i in range(n):
+    for j in range(money_type[i], m+1, money_type[i]):
+        if dp[j-money_type[i]] != 10001:
+            dp[j] = min(dp[j], dp[j-money_type[i]]+1)
 
-print(dp[n-1])
+if dp[m] == 10001:
+    print(-1)
+else:
+    print(dp[m])

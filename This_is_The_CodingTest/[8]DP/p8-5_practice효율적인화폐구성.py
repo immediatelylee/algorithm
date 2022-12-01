@@ -1,38 +1,25 @@
-'''
-n가지의 화폐가 있다. 
-이 화폐들의 개수를 최소한으로 이용해서 그 가치의 합이 M원이 되도록하라
-각 화폐는 몇개라도 사용할 수 있으며 사용한 화폐의 구성은 같지만 순서만 다른것은 같은 경우로 구분한다. 
-2,3원 화폐가 있을때 15원을 만들기 위해 3월 5개를 사용하는것이 가장 최소한의 화폐 개수이다.
-
-첫째줄에 경우의 수 x를 출력한다. 불가능 할때는 -1을 출력한다. 
-2 15
-2
-3
--> 5
-
-3 4
-3
-5
-7
--> -1
-
-# 2한거 주루룩
-  3한거 주루룩
-  5한거 주루룩
-  초기값은 10001
-
-'''
-n, m = map(int(input().split()))
-money = []
-
-dp = [1001] * m+1
-dp[0] = 0
+n, m = map(int, input().split())
+money_type = []
 for i in range(n):
-    for j in range(money[i], m+1):
-        if dp[j-money[i]] != 1001:  # i-k 원을 만드는 방법이 존재하는 경우
-            dp[j] = min(dp[j], dp[j-money[i]]+1)
+    money_type.append(int(input()))
+
+dp = [10001 for i in range(m+1)]
+dp[0] = 0
+
+for i in range(n):
+    for j in range(money_type[i], m+1, money_type[i]):
+        if dp[j-money_type[i]] != 10001:
+            dp[j] = min(dp[j], dp[j-money_type[i]]+1)
 
 if dp[m] == 10001:
     print(-1)
 else:
     print(dp[m])
+
+
+'''
+책에서는 for j 를 돌릴때 money_type[i] 부터 m+1까지 돌렸다. 
+그럴 필요없이 step을 money_type만큼 가져가게 
+예를 들어 money_type이 2일때
+2 4 6 8 10 이렇게 2 씩 증가하게 가져가면 더 효율적일것이다.
+'''
