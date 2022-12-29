@@ -1,21 +1,18 @@
 import sys
 
-n, m = map(int, sys.stdin.readline().rstrip().split())
-balls = list(map(int, sys.stdin.readline().rstrip().split()))
+n, m = map(int, input().split())
+ball_weight = list(map(int, input().split()))
+# 1부터 10까지의 무게를 담을 수 있는 리스트
+weight_list = [0]*(m+1)
 
-# 무게별 볼링공의 개수 정리
-weights = [0] * 10
-for ball in balls:
-    weights[ball] += 1
+for weight in ball_weight:
+    # 각 무게에 해당하는 볼링공의 개수 카운트
+    weight_list[weight] += 1
 
-# 조합 결과
-result = 0
+cnt = 0
+# 1부터 m까지의 각 무게에 대하여 처리
+for i in range(1, m+1):
+    n -= weight_list[i]  # 무게가 i인 볼링공의 개수(A가 선택할 수 있는 개수) 제외
+    cnt += weight_list[i] * n  # B가 선택하는경우의수 곱하기
 
-# 조합 계산
-for i in range(n):
-    # i번째 무게보다 높은 무게의 볼링공 개수
-    n -= weights[i]
-    # i번째 무게의 볼링공 개수 * i번째 무게보다 높은 무게의 볼링공 개수
-    result += weights[i] * n
-
-print(result)
+print(cnt)
