@@ -13,6 +13,11 @@ for _ in range(m):
 distance = [-1] * (n + 1)
 distance[x] = 0  # 출발 도시까지의 거리는 0으로 설정
 
+# 모든 도시에 대한 최단 거리 초기화 !!
+# now 와 next_node사용
+# next_node의 최단거리가 초기화 상태면 now에 +1 더해서 적용
+# 큐에 집어넣음
+
 # 너비 우선 탐색(BFS) 수행
 q = deque([x])
 while q:
@@ -24,6 +29,8 @@ while q:
             # 최단 거리 갱신
             distance[next_node] = distance[now] + 1
             q.append(next_node)
+
+# 그냥 for문으로 돌려서 k 거리인것을 찾으면 True로 바꿈
 
 # 최단 거리가 K인 모든 도시의 번호를 오름차순으로 출력
 check = False
