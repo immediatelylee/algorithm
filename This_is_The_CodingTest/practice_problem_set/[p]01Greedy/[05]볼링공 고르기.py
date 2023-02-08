@@ -16,3 +16,17 @@ for i in range(1, m+1):
     cnt += weight_list[i] * n  # B가 선택하는경우의수 곱하기
 
 print(cnt)
+
+'''
+n, m = map(int, input().split())
+balls = list(map(int, input().split()))
+balls.sort()
+cnt = 0
+
+for i in range(len(balls)):
+    for j in range(i, len(balls)):
+        if balls[i] < balls[j]:
+            cnt += 1
+
+print(cnt)
+'''
