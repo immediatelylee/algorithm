@@ -6,3 +6,14 @@
 볼링공 고르기 [v][][]
 무지의 먹방 라이브  [][][]
 '''
+
+
+def solution(food_times, k):
+    min_food_times = min(food_times)
+    if k >= min_food_times:
+        for i in range(len(food_times)):
+            food_times[i] -= min_food_times
+
+    answer = 0
+
+    return answer
