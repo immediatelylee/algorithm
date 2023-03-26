@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <script>
+        async function loadContent() {
+            // Fetch the HTML content of the source webpage
+            const response = await fetch('https://aqicn.org/city/korea/gyeonggi/suwon-si/');
+            const html = await response.text();
+            
+            // Parse the HTML content to extract the desired element
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const element = doc.querySelector('.aqivalue');
+            
+            // Create a new element on the current webpage and insert the desired element
+            const newElement = document.createElement('div');
+            newElement.appendChild(element.cloneNode(true));
+            document.body.appendChild(newElement);
+        }
+        
+        loadContent();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

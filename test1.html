@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<script>
+		async function loadContent() {
+			// Fetch the HTML content of the source webpage
+			const response = await fetch('https://aqicn.org/city/korea/gyeonggi/suwon-si/');
+			const html = await response.text();
+			
+			// Parse the HTML content to extract the desired element
+			const parser = new DOMParser();
+			const doc = parser.parseFromString(html, 'text/html');
+			const element = doc.querySelector('#aqiwidget aqiwidget-l');
+			
+			// Create a new element on the current webpage and insert the desired element
+			const newElement = document.createElement('div');
+			newElement.appendChild(element.cloneNode(true));
+			document.body.appendChild(newElement);
+		}
+		
+		loadContent();
+	</script>
+</head>
+<body>
+
+    
+    <script  type="text/javascript"  charset="utf-8">  
+        (function(w,d,t,f){  w[f]=w[f]||function(c,k,n){s=w[f],k=s['k']=(s['k']||(k?('&k='+k):''));s['c']=  
+        c=(c  instanceof  Array)?c:[c];s['n']=n=n||0;L=d.createElement(t),e=d.getElementsByTagName(t)[0];  
+        L.async=1;L.src='//feed.aqicn.org/feed/'+(c[n].city)+'/'+(c[n].lang||'')+'/feed.v1.js?n='+n+k;  
+        e.parentNode.insertBefore(L,e);  };  })(  window,document,'script','_aqiFeed'  );    
+    </script>
+    
+    <span  id="city-aqi-container"></span>  
+    
+    <script  type="text/javascript"  charset="utf-8">  
+        _aqiFeed({ display:"%details", container:"city-aqi-container",  city:"korea/gyeonggi/suwon-si"  });  
+    </script>
+    <iframe src="https://earth.nullschool.net/#current/chem/surface/level/overlay=cosc/orthographic=-239.09,38.08,1905/loc=127.506,38.182" width=500" height="500"></iframe>
+    
+</body>
+</html>
+
