@@ -39,3 +39,48 @@ N × M 크기의 얼음 틀이 있다. 구멍이 뚫려 있는 부분은 0, 칸�
 출력 예시2
 
 8
+
+=============================
+풀이법
+이중 for문으로 돌리고 if dfs(i,j) == True: result +=1 을 한다.
+
+dfs에서는 범위를 벗어났을때 한번 , graph[x][y] == 0 일때 if를 건다.
+if x <0 or y<0 or x >= n or y >= m:
+return False
+if graph[x][y] ==0:
+graph[x][y] =1
+
+    이동은 dfs(x,y)에서 x+1,x-1... 같이 4개를 연달아서 해준다.
+    dfs(x-1,y)
+    dfs(x+1,y)
+    dfs(x,y-1)
+    dfs(x,y+1)
+    return True
+
+return False
+
+nxny 사용법
+주로 bfs에서 많이 사용함 .
+x,y를 nx ny로 새로 지정해서 if문과 좌표로 사용
+
+# 이동할 방향 정의 (상, 하, 좌, 우)
+
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1, 1]
+
+def bfs(x, y): # 큐 구현을 위해 deque 라이브러리 사용
+queue = deque()
+queue.append((x, y)) # 큐가 빌 때까지 반복
+while queue:
+x, y = queue.popleft() # 현재 위치에서 네 방향으로의 위치 확인
+for i in range(4):
+nx = x + dx[i]
+ny = y + dy[i]
+
+            # 미로 찾기 공간을 벗어난 경우 무시
+            if nx < 0 or ny < 0 or nx >= n or ny >= m:
+                continue
+
+            # 벽인 경우 무시
+            if graph[nx][ny] == 0:
+                continue
