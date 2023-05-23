@@ -1,12 +1,12 @@
 '''
 음료수 열러먹기 [][][]
-    dx,dy없이
-    dx,dy사용해서 
+    dx,dy없이 [v]
+    dx,dy사용해서 [v]
 미로탈출       [][][]
 
 
 '''
-
+from collections import deque
 
 n,m =map(int,input().split())
 graph = []
@@ -19,23 +19,32 @@ for i in range(n):
     graph.append(list(map(int,input())))
 
 def dfs(x,y):
-    if x <0 or y<0 or x >= n or y >= m:
+    if graph[x][y] ==1:
         return False
-    if graph[x][y] ==0:
-        graph[x][y] =1
+    queue = deque()
+    queue.append((x,y))
 
-        dfs(x-1,y)
-        dfs(x+1,y)
-        dfs(x,y-1)
-        dfs(x,y+1)
-        return True
-    return False
+    while queue:
+        x,y = queue.popleft()
+        for i in range(4):
+            nx = x + dx[i]
+            ny = y + dy[i]
+
+            if nx <0 or ny<0 or nx >= n or ny >= m:
+                    continue
+            if graph[nx][ny] ==0:
+                graph[nx][ny] =1
+                queue.append((nx,ny))
+    graph[nx-1][ny-1]
+    return 1
+                
+            
 
 
 result = 0
 for i in range(n):
     for j in range(m):
-        if dfs(i,j) == True:
+        if dfs(i,j) == 1:
             result +=1
 
 print(result)
