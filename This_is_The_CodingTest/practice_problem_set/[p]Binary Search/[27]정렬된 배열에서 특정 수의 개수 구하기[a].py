@@ -13,3 +13,4 @@ if right - left == 0:
     print(-1)
 else:
     print(right - left)
+
