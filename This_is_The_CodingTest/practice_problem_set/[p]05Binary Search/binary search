@@ -1,0 +1,116 @@
+범위를 반씩 좁혀가는 탐색
+순차 탐색
+리스트 안에 있는 특정한 데이터를 찾기 위해 앞에서부터 데이터를 하나씩 차례대로 확인하는 방법
+
+보통 정렬되지 않은 리스트에서 데이터를 찾아야 할 때 사용한다.
+
+리스트 내에 데이터가 아무리 많아도 시간만 충분하다면 항상 원하는 원소(데이터)를 찾을 수 있다는 장점이 있다.
+
+순차 탐색은 이름처럼 순차로 데이터를 탐색한다는 의미이다.
+ex) 리스트에 특정 값의 원소가 있는지 체크할 때도 순차 탐색으로 원소를 확인
+ex) 리스트 자료형에서 특정한 값을 가지는 원소의 개수를 세는 count() 메서드를 이용할 때도 내부에서는 순차 탐색이 수행된다.
+
+시간복잡도 : O(N)
+
+#순차 탐색 소스코드 구현
+
+def sequential_search(n, target, array):
+  # 각 원소를 하나씩 확인하며
+  for i in range(n):
+    # 현재의 원소가 찾고자 하는 원소와 동일한 경우
+    if array[i] == target:
+      return i + 1 #현재의 위치를 반환(인덱스는 0부터 시작하므로 1 더하기)
+
+
+print("생성할 원소 개수를 입력한 다음 한 칸 뛰고 찾을 문자열을 입력하세요")
+input_data = input().split()
+
+n = int(input_data[0]) #원소의 개수
+target = input_data[1] #찾고자 하는 문자열을
+
+print("앞서 적은 원소 개수만큼 문자열을 입력하세요. 구분은 띄어쓰기 한 칸으로 합니다.")
+array = input().split()
+
+
+
+#순차 탐색 수행 결과 출력
+
+print(sequential_search(n, target, array))
+이진 탐색 : 반으로 쪼개면서 탐색하기
+배열 내부의 데이터가 정렬되어 있어야만 사용할 수 있는 알고리즘이다.
+
+데이터가 무작위일 때는 사용x, but 이미 정렬되어 있다면 매우 빠르게 데이터를 찾을 수 있다는 특징이 있다.
+이진 탐색은 위치를 나타내는 변수 3개를 사용하는데 탐색하고자 하는 범위의 시작점, 끝점 그리고 중간점이다. 찾으려는 데이터와 중간점위치에 있는 데이터를 반복적으로 비교해서 원하는 데이터를 찾는 게 이진 탐색과정이다.
+
+시간복잡도 : O(logn)
+
+절반씩 줄어들도록 만든다는 점은 앞서 다룬 퀵 정렬과 공통점이 있다.
+
+
+#이진 탐색 소스코드 구현(재귀 함수)
+
+def binary_search(array, target, start, end):
+  if start > end:
+    return None
+  mid = (start + end) // 2
+  # 찾은 경우 중간점 인덱스 반환
+
+  if array[mid] == target:
+    return mid
+
+  #중간점의 값보다 찾고자 하는 값이 작은 경우 왼쪽 확인
+  elif array[mid] > target:
+    return binary_search(array, target, start, mid - 1)
+
+  else :
+    return binary_search(array, target, mid+1, end)
+
+#n(원소의 개수)과 target(찾고자 하는 문자열)을 입력받기
+n, target = list(map(int, input().split()))
+
+#전체 원소 입력받기
+array = list(map(int, input().split()))
+
+#이진 탐색 수행 결과 출력
+result = binary_search(array, target, 0, n-1)
+if result == None:
+  print("원소가 존재하지 않습니다.")
+
+else:
+  print(result + 1)
+
+# 이진 탐색 소스코드 구현(반복문)
+
+def binary_search(array, target, start, end):
+  while start <= end:
+    mid = (start + end) // 2
+    #찾은 경우 중간점 인덱스 반환
+    if array[mid] == target:
+      return mid
+    #중간점의 값보다 찾고자 하는 값이 작은 경우 왼쪽 확인
+    elif array[mid] > target:
+      end = mid - 1
+    #중간점의 값보다 찾고자 하는 값이 큰 경우 오른쪽 확인
+    else:
+      star = mid + 1
+  return None
+
+
+#n(원소의 개수)과 target(찾고자 하는 문자열)을 입력받기
+n, target = list(map(int, input().split()))
+
+
+#전체 원소 입력받기
+array = list(map(int, input().split()))
+
+  #이진 탐색 수행 결과 출력
+result = binary_search(array, target, 0, n-1)
+if result == None:
+  print("원소가 존재하지 않습니다.")
+
+else:
+  print(result + 1)
+이진탐색은 외우자. 막상 생각해서 구현하려고 하면 매우 어렵다.
+
+코테에서 이진 탐색 문제는 탐색 범위가 큰 상황에서의 탐색을 가정하는 문제가 많다. 따라서 탐색의 범위가 2,000만을 넘어가면 이진 탐색으로 문제에 접근하기
+=> 처리해야 할 데이터의 개수나 값이 1,000만 단위 이상으로 넘어가면 이진 탐색과 같이 O(logN)의 속도를 내야 하는 알고리즘을 떠올려야 문제를 풀 수 있다.
