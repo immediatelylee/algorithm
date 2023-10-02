@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>앵무새 인테이러 포스터 | Muppy Market</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/design.css">
+    <script src="/copang_login/copang_detail/js/detail.js"></script>
+</head>
+<div name="content">
+    <body>
+        <input type="hidden" id="itemId" th:value="${item.id}">
+        <main id="order_wrap">
+            <div class="left">
+                <img th:src="${item.itemImgDtoList[0].imgUrl}" class = "rounded repImg" th:alt="${item.itemNm}">
+            </div>
+            <div class="right">
+                <div class="top">
+                    <h1 th:text="${item.itemNm}"></h1>
+                    <p th:text="${item.itemDetail}"></p>
+                    <dl>
+                        <dt>판매가격</dt>
+                        <dd class="price" th:text="${item.price}"></dd>
+                        <dt>적립금</dt>
+                        <dd>1%</dd>
+                        <dt>원산지</dt>
+                        <dd>대한민국</dd>
+                    </dl>
+                    <div class="number">
+                        <p class="order_name" th:text= "${item.itemNm}"></p>
+                        <div class="order_number">
+                            <!-- <input type="number" name="num" id=""> -->
+                            <span class="number_price" th:text="${item.price}"></span>
+                        </div>
+                    </div>
+                    <div class="container1">
+                        <button id="minus" disabled>-</button>
+                        <!-- <button id="minus" disabled><img src="/copang_login/copang_detail/images/minus_round_icon.svg" alt=""></button> -->
+                        <input type="number" id="numberInput" value="1" min="1" max="9">
+                        <!-- <button id="plus"><img src="/copang_login/copang_detail/images/plus_new_icon.svg" alt=""></button> -->
+                        <button id="plus">+</button>
+
+                    </div>
+                    <div class="total_price">
+                        <p>총 상품 금액</p>
+                        <p class="result_price">3,000원</p>
+                    </div>
+            </div>
+            <div class="bottom">
+                <button type="button" id="order_btn">주문하기</button>
+                <button type="button" id="cart_btn">장바구니</button>
+                <button type="button" id="like_btn">찜하기</button>
+            </div>
+            </div>
+        </main>
+        
+    </body>
+</div>
+</html>
