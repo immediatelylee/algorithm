@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./muppy.css">
+</head>
+<body id="main">
+    <section id="hd_top">
+        <div>
+            <a href="">LOGIN</a>
+            <a href="">JOIN</a>
+            <a href="">ORDER</a>
+            <a href="">MY PAGE</a>
+        </div>
+    </section>
+    <header id="header">
+        <div class="inner">
+            <div class="hd_left">
+                <div class="hd_subMenu">
+                    <img src="" class="menu" alt="">
+                    <img src="" class="close" alt="">
+                </div>
+                <div class="logo_box">
+                    <div class="hd_logo">
+                        <a href="/index.html">
+                            <img src="" alt="">
+                        </a>
+                        <div class="event_logo"></div>
+                    </div>
+                    <ul class="hd_menu">
+                        <li>
+                            <a href="/karypick.html" >캐리픽</a>
+                        </li> 
+                        <li>
+                            <a href="/product/list.html?cate_no=8126">베스트</a>
+                        </li> 
+                        <li>
+                            <a href="/product/new.html?cate_no=8125" >신상품</a>
+                        </li>
+                        <li>
+                            <a href="/brand.html">브랜드</a>
+                        </li>
+                        <li>
+                            <a href="/event.html">이벤트</a>
+                        </li>
+                    </ul>
+                
+                </div>
+            </div>
+            <div class="hd_right">
+                <form id="searchBarForm"  action="#" method="get" enctype="multipart/form-data"></form>
+                    <input id="banner_action" name="banner_action" value="" type="hidden">
+                    <div class="xans-element- xans-layout xans-layout-searchheader ">
+                        <!--
+                                $product_page=/product/detail.html
+                                $category_page=/product/list.html
+                                -->
+                        <fieldset>
+                            <legend>검색</legend>
+                            <input id="keyword" name="keyword" fw-filter="" fw-label="검색어" fw-msg="" class="inputTypeText" placeholder="" onmousedown="SEARCH_BANNER.clickSearchForm(this)" value="" type="text" >
+                            <input type="image" src="/web/upload/img/search_bt.png" alt="검색" onclick="SEARCH_BANNER.submitSearchBanner(this); return false;">
+                        </fieldset>
+                    </div>
+                </form>
+                <a href="/order/basket.html" class="xans-element- xans-layout xans-layout-orderbasketcount ">
+                    <img src="/web/upload/img/top_cart.png" alt="CART">
+                </a>
+                        <a href="/myshop/wish_list.html">
+                    <img src="/web/upload/img/top_wish.png" alt="WISH">
+                </a>
+            </div>
+
+        </div>
+    </header>
+    <div id="dimmedSlider" style="display: none;"></div>
+<script type="text/javascript">
+    var search_type = "";
+
+    // 검색부분은 나중에 
+    // function go_search()
+    // {
+    //     var search_url = "";
+    //     var keyword = encodeURIComponent($("#keyword").val());
+    //     if(search_type == "products"){
+    //         search_url = "/product/search.html?banner_action=&keyword=" +keyword;
+    //     }
+    //     else{
+    //         search_url = "/board/gallery/list.html?board_no=8&page=1&board_sort=&search="+keyword+"&search_date=all&search_key=content";
+    //     }
+    //     location.href = search_url;
+    // }  
+
+    $(document).ready(function(){
+        $(".hd_subMenu").mouseover(function(){
+            $('#dimmedSlider').css("display", "block");
+        });
+        $(".hd_subMenu").mouseout(function(){
+            $("#dimmedSlider").css("display", "none");
+        });
+    });
+
+    if($('.event_logo .xans-smart-banner-admin ').length){ 
+    	$('.hd_logo > a').css('display','none')
+        $('#header .event_logo ').css('position','unset')
+    }
+    
+// script하나더 있는데 생략함
+
+// ul이 게속 바뀌면서 슬라이드
+<div id="section1">
+    <div class="flexslider">   
+        <span class="pop_paging" style="">3/9</span>
+        <div class="flex-viewport" style="overflow: hidden; position: relative;">
+
+		<ul class="slides" style="width: 2200%; transition-duration: 0.6s; transform: translate3d(-4440px, 0px, 0px);">
+			<li style="background: url(&quot;/web/upload/img/img8/_1010_pc_mainBnr_8.jpg&quot;) center center no-repeat; width: 1480px; float: left; display: block;" class="clone" aria-hidden="true"><a href="/project/23_9342.html?cate_no=9342" class="main_08"><img src="/web/upload/img/empty.gif" draggable="true"></a></li><!--★ 1010 메인 배너 노출 영역 // --><li style="background: url(&quot;/web/upload/img/img8/_1011_pc_main_family-sale.jpg&quot;) center center no-repeat; width: 1480px; float: left; display: block;" class=""><a href="/project/family_main.html" class="main_10"><img src="/web/upload/img/empty.gif" draggable="true" style=""></a></li>  <!-- 10월메인프로모션-패밀리세일 | 10.31까지 노출 -->
+			<li style="background: url(&quot;/web/upload/img/img8/_1010_pc_mainBnr_2.jpg&quot;) center center no-repeat; width: 1480px; float: left; display: block;" class=""><a href="/project/23_9382.html?cate_no=9382" class="main_02"><img src="/web/upload/img/empty.gif" draggable="true" style=""></a></li>                 <!-- 키즈패션, 나우 | 10.15까지 노출 -->            
+			<li style="background: url(&quot;/web/upload/img/img8/_1010_pc_mainBnr_1.jpg&quot;) center center no-repeat; width: 1480px; float: left; display: block;" class="flex-active-slide"><a href="/product/brand.html?cate_no=7545" class="main_01"><img src="/web/upload/img/empty.gif" draggable="true" style=""></a></li>                 <!-- 스윔마베베 | 10.15까지 노출 -->	                                  
+			<li style="background: url(&quot;/web/upload/img/img8/_1010_pc_mainBnr_3.jpg&quot;) center center no-repeat; width: 1480px; float: left; display: block;" class=""><a href="/project/23_9377.html?cate_no=9377" class="main_03"><img src="/web/upload/img/empty.gif" draggable="true" style=""></a></li>                <!--프랑브아즈 | 10.15까지 노출  --> 
+			<li style="background: url(&quot;/web/upload/img/img8/_1010_pc_mainBnr_4.jpg&quot;) center center no-repeat; width: 1480px; float: left; display: block;" class=""><a href="/project/23_9378.html?cate_no=9378" class="main_04"><img src="/web/upload/img/empty.gif" draggable="true" style=""></a></li>                 <!--스토조 | 10.15까지 노출  -->     
+			<li style="background: url(&quot;/web/upload/img/img8/_1010_pc_mainBnr_5.jpg&quot;) center center no-repeat; width: 1480px; float: left; display: block;" class=""><a href="/product/brand.html?cate_no=287" class="main_05"><img src="/web/upload/img/empty.gif" draggable="true" style=""></a></li>                 <!-- 스윙슬라이드 | 10.15까지 노출  -->                         
+			<li style="background: url(&quot;/web/upload/img/img8/_1010_pc_mainBnr_6.jpg&quot;) center center no-repeat; width: 1480px; float: left; display: block;" class=""><a href="/project/23_9379.html?cate_no=9379" class="main_06"><img src="/web/upload/img/empty.gif" draggable="true" style=""></a></li>                <!-- 럭셔리리빙에센셜 | 10.15까지 노출  -->                
+			<li style="background: url(&quot;/web/upload/img/img8/_1010_pc_mainBnr_7.jpg&quot;) center center no-repeat; width: 1480px; float: left; display: block;" class=""><a href="/product/brand.html?cate_no=313" class="main_07"><img src="/web/upload/img/empty.gif" draggable="true" style=""></a></li>                <!-- 나인웨어 | 10.15까지 노출  -->                    
+			<li style="background: url(&quot;/web/upload/img/img8/_1010_pc_mainBnr_8.jpg&quot;) center center no-repeat; width: 1480px; float: left; display: block;" class=""><a href="/project/23_9342.html?cate_no=9342" class="main_08"><img src="/web/upload/img/empty.gif" draggable="true" style=""></a></li>                <!-- 내피위크 | 10.15까지 노출  -->           
+			<li style="background: url(&quot;/web/upload/img/img8/_1011_pc_main_family-sale.jpg&quot;) center center no-repeat; width: 1480px; float: left; display: block;" class="clone" aria-hidden="true"><a href="/project/family_main.html" class="main_10"><img src="/web/upload/img/empty.gif" draggable="true" style=""></a></li></ul></div><ol class="flex-control-nav flex-control-paging"><li><a class="">1</a></li><li><a class="">2</a></li><li><a class="flex-active">3</a></li><li><a class="">4</a></li><li><a class="">5</a></li><li><a class="">6</a></li><li><a class="">7</a></li><li><a class="">8</a></li><li><a class="">9</a></li></ol><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#">Previous</a></li><li class="flex-nav-next"><a class="flex-next" href="#">Next</a></li>
+		</ul>
+		<div class="flex-pauseplay">
+			<a class="flex-pause">||</a>
+		</div>
+	</div>
+</div>
+
+</script>
+</body>
+</html>
