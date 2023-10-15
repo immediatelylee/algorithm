@@ -1,0 +1,71 @@
+* {
+    
+}
+@media screen and (max-width:1560px){
+    #hd_top div {
+        width: 75%;
+    }
+}
+
+#hd_top {
+    position: relative;
+    z-index: 999;
+    background: #000;
+    padding: 8.5px 0;
+    display: block;
+    box-sizing: border-box;
+}
+
+#hd_top div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#hd_top div a {
+    margin: 0 8px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    outline: none;
+}
+#header {}
+#header .inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1400px;
+    min-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+#header .inner .hd_left{
+    display: flex;
+    align-items: center;
+}
+#header .inner .hd_left .hd_subMenu{
+    width: 75px;
+    margin-left: -12px;
+    padding: 68px 20px 64px;
+} 
+#header .inner .hd_left .logo_box{
+    display: flex;
+    align-items: center;
+    padding: 40px 0 36px 29px;
+} 
+
+
+#header .inner .hd_right{
+    display: flex;
+    align-items: center;
+    margin-right: 18px;
+}
+#header .inner .hd_right #searchBarForm{
+    margin-right: 5px;
+    outline: none;
+}
+
+
