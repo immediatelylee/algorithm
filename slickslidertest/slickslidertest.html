@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>Slick</title>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script>
+    $( document ).ready( function() {
+        $( '.slider' ).slick( {
+        autoplay: true,
+        autoplaySpeed: 2000,
+        } );
+    } );
+    </script>
+    <style>
+    body{background: black;}
+    .slick-prev{
+        background: url(./images/prev.png) no-repeat 0 0;
+        width: 16px;
+        height: 30px;
+    }
+    .slick-next{
+        background: url(./images/next.png) no-repeat 0 0;
+        width: 16px;
+        height: 30px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .slider {
+        width: 1920px;
+        margin: 0px auto;
+    }
+    .slick-prev:before, .slick-next:before {
+        color: #444444;
+    }
+    </style>
+</head>
+<body>
+    <div class="slider">
+    <div><img src="./images/img8/_1010_pc_mainBnr_1.jpg" alt=""></div>
+    <div><img src="./images/img8/_1010_pc_mainBnr_2.jpg" alt=""></div>
+    <div><img src="./images/img8/_1010_pc_mainBnr_3.jpg" alt=""></div>
+    <div><img src="./images/img8/_1010_pc_mainBnr_4.jpg" alt=""></div>
+    <div><img src="./images/img8/_1010_pc_mainBnr_5.jpg" alt=""></div>
+    </div>
+  </body>
+</html>
