@@ -5,9 +5,10 @@ var slides = document.querySelector('.slides'),
     slideWidth = 1920,
     slideMargin = 0,
     prevBtn = document.querySelector('.prev'),
-    nextBtn = document.querySelector('.next');
+    nextBtn = document.querySelector('.next'),
     // 추가본
-
+    toggleBtn = document.querySelector('.toggle'),
+    isPaused = false; // Variable to track if the slideshow is paused
 
 
 
@@ -97,7 +98,16 @@ function stopSlide(){
     timer = undefined;
 }
 
-
-
-
-
+toggleBtn.addEventListener('click', toggleSlideshow);
+// 추가본
+function toggleSlideshow() {
+    if (isPaused) {
+        isPaused = false; // If paused, resume the slideshow
+        toggleBtn.textContent = '||'; // Change to play symbol
+        autoSlide(); // Start automatic slideshow
+    } else {
+        isPaused = true; // If not paused, pause the slideshow
+        toggleBtn.textContent = '▶'; // Change to pause symbol
+        stopSlide(); // Stop the slideshow
+    }
+}
