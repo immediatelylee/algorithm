@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./mainslide.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="section1">
+        <div class="flexslider">
+            <ul class="slides">
+                <!--★ 1016 메인 배너 노출 영역 // -->
+                <li style="background:url(./img8/_1010_pc_mainBnr_1.jpg) center no-repeat">
+                    <a href="#" class="main_10">
+                        <img src="/web/upload/img/empty.gif"/>
+                    </a>
+                </li>
+                <!-- 10월메인프로모션-패밀리세일 | 10.31까지 노출 -->
+                <li style="background:url(./img8/_1010_pc_mainBnr_2.jpg) center no-repeat">
+                    <a href="#" class="main_01">
+                        <img src="/web/upload/img/empty.gif"/>
+                    </a>
+                </li>
+                <!-- 프라이 | 10.24까지 노출 -->
+                <li style="background:url(./img8/_1010_pc_mainBnr_3.jpg) center no-repeat">
+                    <a href="#" class="main_02">
+                        <img src="/web/upload/img/empty.gif"/>
+                    </a>
+                </li>
+                <!-- 호텔 세리토스 | 10.24까지 노출 -->
+                <li style="background:url(./img8/_1010_pc_mainBnr_4.jpg) center no-repeat">
+                    <a href="#" class="main_03">
+                        <img src="/web/upload/img/empty.gif"/>
+                    </a>
+                </li>
+                <!-- 선샵 | 10.24까지 노출  -->
+                <li style="background:url(./img8/_1010_pc_mainBnr_5.jpg) center no-repeat">
+                    <a href="#" class="main_04">
+                        <img src="/web/upload/img/empty.gif"/>
+                    </a>
+                </li>
+                <!--아우터대전 | 10.24까지 노출  -->
+                <li style="background:url(./img8/_1010_pc_mainBnr_6.jpg) center no-repeat">
+                    <a href="#" class="main_05">
+                        <img src="/web/upload/img/empty.gif"/>
+                    </a>
+                </li>
+                <!-- 프랭크썸 | 10.24까지 노출  -->
+                <li style="background:url(./img8/_1010_pc_mainBnr_7.jpg) center no-repeat">
+                    <a href="#" class="main_06">
+                        <img src="/web/upload/img/empty.gif"/>
+                    </a>
+                </li>
+                <!-- 10월패션위크 | 10.18 - 10.24까지 노출  -->
+                <li style="background:url(./img8/_1010_pc_mainBnr_8.jpg) center no-repeat">
+                    <a href="#" class="main_07">
+                        <img src="/web/upload/img/empty.gif"/>
+                    </a>
+                </li>
+                <!-- 니노린도 | 10.22까지 노출  -->
+                <li style="background:url(./img8/_1010_pc_mainBnr_8.jpg) center no-repeat">
+                    <a href="#" class="main_08">
+                        <img src="/web/upload/img/empty.gif"/>
+                    </a>
+                </li>
+                <!-- 폴프랜즈 | 10.22까지 노출  -->
+            </ul>
+            <span class="pop_paging">2/2</span>
+        </div>
+    </div>
+    <style>
+        #section1 {
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        /* 재생, 일시정지 */
+        .flex-pauseplay {
+            position: absolute;
+            bottom: 5.5%;
+            right: 230px
+        }
+
+        .flex-pauseplay a {
+            color: #fff;
+            display: block;
+            width: 32px;
+            height: 32px;
+            line-height: 30.9px;
+            text-align: center;
+            font-size: 13px;
+            background: #bbb5;
+            border-radius: 50%;
+            transition: unset
+        }
+
+        .flex-pauseplay a.flex-play {
+            padding: 1.2px 2px 0px 5.1px;
+            transition: unset
+        }
+
+        .flex-pauseplay a.flex-pause {
+            padding-left: 0.8px;
+            font-weight: 600;
+        }
+
+        .flex-pauseplay a:hover {
+            cursor: pointer;
+        }
+
+        /* 페이지 */
+        .pop_paging {
+            display: block;
+            width: 55px;
+            position: absolute;
+            bottom: 6.7%;
+            right: 130px;
+            text-align: center;
+            z-index: 9999;
+            color: #999;
+            font-size: 15px;
+        }
+
+        /* 이전, 다음 버튼 */
+        .flex-control-nav {
+            display: none;
+        }
+
+        .flex-direction-nav .flex-prev, .flex-direction-nav .flex-next {
+            z-index: 9999;
+            bottom: 5.5%;
+            top: unset;
+            background-size: 30px !important;
+            filter: invert(1);
+            opacity: unset;
+            background-color: #4445 !important;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+
+        .flex-direction-nav .flex-prev {
+            background: url(/web/upload/img/prev.png);
+            right: 187px;
+            left: unset;
+            background-position: 0px 1px;
+        }
+
+        .flex-direction-nav .flex-next {
+            background: url(/web/upload/img/next.png);
+            right: 97px;
+            background-position: 2px 1px;
+        }
+
+        .flexslider:hover .flex-direction-nav .flex-prev {
+            right: 187px;
+            left: unset;
+        }
+
+        .flexslider:hover .flex-direction-nav .flex-next {
+            right: 97px;
+        }
+
+        .flexslider:hover .flex-direction-nav .flex-prev:hover, .flexslider:hover .flex-direction-nav .flex-next:hover {
+            opacity: unset;
+        }
+    </style>
+    <script type="text/javascript">
+
+        $(function() {
+            var $status = $('.pop_paging');
+            var $sliderElement = $('.flexslider');
+            var $slideElement = $('.flexslider li');
+            $status.text("1/" + $slideElement.length);
+
+            $sliderElement.flexslider({
+                animation: "slide",
+                pauseOnHover: false,
+                pausePlay: true,
+                pauseText: '||',
+                playText: '▶',
+                start: function(slider) {},
+                after: function(slider) {
+                    $status.text(slider.currentSlide + 1 + "/" + $slideElement.length);
+                }
+            });
+        })
+    </script>
+    <ol class="flex-control-nav flex-control-paging"><li><a class="">1</a></li><li><a class="">2</a></li><li><a class="">3</a></li><li><a class="">4</a></li><li><a class="">5</a></li><li><a class="">6</a></li><li><a class="flex-active">7</a></li><li><a class="">8</a></li><li><a class="">9</a></li></ol>
+    <ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#">Previous</a></li><li class="flex-nav-next"><a class="flex-next" href="#">Next</a></li></ul>
+    <div class="flex-pauseplay"><a class="flex-pause">||</a></div>
+</div>
+</div>
+</body>
+</html>
