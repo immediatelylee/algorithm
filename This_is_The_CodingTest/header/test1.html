@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Two-Line Header</title>
+</head>
+<body>
+    <header class="header-top">
+    <nav class="left-nav">
+        <ul >
+            <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
+                <a class="nav-link" href="/admin/item/new">상품 등록</a>
+            </li>
+            <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
+                <a class="nav-link" href="/admin/items">상품 관리</a>
+            </li>
+            <li class="nav-item" sec:authorize="isAuthenticated()">
+                <a class="nav-link" href="/cart">장바구니</a>
+            </li>
+            <li class="nav-item" sec:authorize="isAuthenticated()">
+                <a class="nav-link" href="/orders">구매이력</a>
+            </li>
+            <li class="nav-item" sec:authorize="isAnonymous()">
+                <a class="nav-link" href="/members/login">로그인</a>
+            </li>
+            <li class="nav-item" sec:authorize="isAuthenticated()">
+                <a class="nav-link" href="/members/logout">로그아웃</a>
+            </li>
+        </ul>
+    </nav>
+    <nav>
+            <ul>
+                <li><a href="#">LOGIN</a></li>
+                <li><a href="#">JOIN</a></li>
+                <li><a href="#">ORDER</a></li>
+                <li><a href="#">MYPAGE</a></li>
+            </ul>
+    </nav>
+    </header>
+    <header class="header-bottom">
+        <div class="menu-box">
+            <div class="submenu">
+                <img src="menu.svg" alt="Submenu Icon">
+            </div>
+            <div class="menu">            
+                <span class="menu-item-box">
+                    <span class="menu-item">M U P P Y  MARKET</span>
+                </span>
+                
+                <span class="menu-item">머피픽</span>
+                <span class="menu-item">베스트</span>
+                <span class="menu-item">신상품</span>
+                <span class="menu-item">브랜드</span>
+                <span class="menu-item">이벤트</span>
+            </div>
+        </div>
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" class="search-input" >
+                <div class="search-button" id="search-icon">
+                    <img src="search.svg" alt="Search">
+                </div>
+            </div>    
+                
+        </div>
+        <div class="icon-container">
+            <button class="icon-button" onclick="handleCartClick()"><img src="bag.svg" alt="Cart Icon"></button>
+            <button class="icon-button" onclick="handleWishClick()"><img src="heart.svg" alt="Wish Icon"></button>
+        </div>
+    </header>
+</body>
+</html>
