@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#wrap {
+    width: 100%;
+    margin: 60px auto 0;
+}
+div {
+    display: block;
+}
+.titleArea{
+    text-align: center;
+}
+
+.titleArea h2 {
+    display: inline-block;
+    color: #2e2e2e;
+    padding: 0;
+    letter-spacing: 3.5px;
+}
+.xans-member-login .login {
+    margin: 0 0 3px 0;
+    padding: 30px 0;
+    color: #2e2e2e;
+}
+.xans-member-login .login fieldset {
+    position: relative;
+    width: 380px;
+    margin: 0px auto;
+}
+label {
+    cursor: default;
+}
+input, select, textarea {
+    vertical-align: middle;
+}
+fieldset {
+    display: block;
+
+    margin: 0 auto;
+    text-align: center;
+    border-color: white;
+}
+.id,.password,.security,a,ul,.snsArea,.link {
+    display: block; /* 요소들을 블록 수준으로 표시하여 세로 중앙 정렬 */
+    margin: 0 auto; /* 요소들을 가로 중앙 정렬 */
+    text-align: left; /* 텍스트를 왼쪽으로 정렬 */
+}

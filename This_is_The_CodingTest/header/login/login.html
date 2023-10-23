@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>로그인 페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        #login-header {
+            font-size: 24px;
+        }
+
+        #login-form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .form-input {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+
+        .form-input input {
+            padding: 5px;
+        }
+
+        #login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            margin-top: 20px;
+        }
+
+        .social-login {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social-login-button {
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        #separator {
+            margin: 20px 0;
+            border-top: 1px solid #ccc;
+            width: 100%;
+        }
+
+        #signup-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        #signup-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        <div id="login-header">Member Login</div>
+        <form id="login-form">
+            <div class="form-input">
+                <input type="text" id="username" name="username" placeholder="아이디">
+            </div>
+            <div class="form-input">
+                <input type="password" id="password" name="password" placeholder="패스워드">
+            </div>
+            <button id="login-button">로그인</button>
+        </form>
+        <div class="social-login">
+            <div class="social-login-button">네이버 로그인</div>
+            <div class="social-login-button">구글 로그인</div>
+            <div class="social-login-button">카카오 로그인</div>
+            <div class="social-login-button">애플 로그인</div>
+        </div>
+        <div id="separator"></div>
+        <div id="signup-info">
+            <div>
+                회원가입을 하시면<br>
+                다양하고 특별한 혜택이 준비되어 있습니다.
+            </div>
+            <button id="signup-button">회원가입</button>
+        </div>
+    </div>
+</body>
+</html>
