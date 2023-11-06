@@ -63,9 +63,19 @@
     align-items: center;
     margin-right: 18px;
 }
-#header .inner .hd_right #searchBarForm{
+#header #searchBarForm{
     margin-right: 5px;
     outline: none;
 }
+input{
+    font-size: 100%;
+    color: #353535;
+    vertical-align: middle;
+
+}
+#header .hd_right .xans-layout-searchheader fieldset{
+    border-bottom: 1px solid #888;
+}
+
 
 
