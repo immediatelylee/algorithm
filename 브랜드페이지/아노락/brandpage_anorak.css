@@ -126,7 +126,10 @@ ul {
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-inline-start: 40px;
+    /* 원래 페이지와는 다르게 수정함  */
+    /* 원래 페이지에서는 40px이였음. padding-inline-start: 40px; */
+
+    padding-inline-start: 0px;
 }
 
 .xans-product-menupackage .menuCategory > li {
@@ -163,6 +166,11 @@ p {
 
 .brand_wrap .banner img {
     width: 100%;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
 }
 
 img, fieldset {
@@ -244,18 +252,75 @@ img, fieldset {
     position: relative;
 }
 
-.ec-base-product .prdList .thumbnail a > img {
-    width: 100%;
-}
+
 
 .ec-base-product .prdList .thumbnail a img {
     max-width: 100%;
     box-sizing: border-box;
 }
+.ec-base-product .prdList .thumbnail a > img {
+    width: 100%;
+}
 
 .ec-base-product img {
     vertical-align: middle;
 }
+
+.prdList .listOver {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    text-align: center;
+    width: 200px;
+    transition-delay: 0s;
+}
+
+.listOver p {
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 80px;
+    text-align: center;
+    padding: 13px 0 0 0;
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+    opacity: 0.9;
+}
+
+.prdList .list_item .listOver p {
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 80px;
+    text-align: center;
+    padding: 13px 0 0 0;
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+    opacity: 0.9;
+}
+
+.listImg .listOver p img, .prdList .list_item .listOver p img {
+    cursor: pointer;
+    max-height: 23px;
+}
+
+.option_bt {
+    position: absolute;
+    z-index: 10;
+    right: 6px;
+    top: auto;
+    margin-top: 4px;
+}
+
+
+
+
 
 .listImage {
     opacity: 1;
@@ -266,7 +331,99 @@ img, fieldset {
     backface-visibility: hidden;
 }
 
-img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
+.prdList .description {
+    position: relative;
+    width: 95% !important;
+    margin-top: 4px;
+}
+
+.ec-base-product .prdList .description {
+    margin: 0 auto;
+    width: 90%;
+    padding: 0px 1px;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 1.0px;
+}
+
+.prdList .description .name {
+    padding: 32px 0 8px 0 !important;
+    line-height: 1.5em;
+}
+
+.ec-base-product .prdList .description .name {
+    display: block;
+    text-align: left;
+    font-weight: normal;
+    padding: 5px 0 10px 0;
+}
+
+.ec-base-product .prdList .description .name a {
+    color: #2e2e2e;
+}
+
+.ec-base-product .spec {
+    margin: 0;
+}
+
+.prdList .spec {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    letter-spacing: 0.1px;
+
+
+}
+
+
+.ec-base-product .spec li {
+    text-align: left;
+    padding: 3px 0;
+    font-family: 'Apercu Pro','Noto Sans','Malgun Gothic','Nanum Gothic',Verdana,Dotum,AppleGothic,sans-serif;
+}
+
+.prdList .spec li {
+
+    font-family: 'Apercu Pro','Noto Sans','Malgun Gothic','Nanum Gothic',Verdana,Dotum,AppleGothic,sans-serif;
+}
+
+
+.prdList .spec li:first-child {
+    margin: 0 -1px;
+}
+
+.ec-base-product .title {
+    margin: 0 0 17px;
+}
+
+.ec-base-product .spec li .title {
+    font-weight: normal;
+    vertical-align: top;
+}
+.prdList .spec li .title {
+    font-weight: normal;
+}
+
+.ec-base-product .spec li .title span {
+    vertical-align: top;
+}
+
+.prdList span a.k {
+    font-size: 12px !important;
+    position: absolute;
+    background: #fff;
+    top: 0;
+    left: 0;
+    letter-spacing: 0.5px;
+    color: #222;
+    border: 1px solid #ececec;
+    border-radius: 15px;
+    margin: 2px 0 0 0;
+    padding: 2px 8px;
+}
+
+.prdList .spec li:nth-child(n+4) {
+    width: 100%;
 }
