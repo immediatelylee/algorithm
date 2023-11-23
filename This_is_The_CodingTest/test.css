@@ -1,0 +1,44 @@
+/* Reset some default styles */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Style the top header */
+.header-top {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+}
+
+/* Style the navigation menu in the top header */
+.header-top nav ul {
+    display: flex;
+}
+
+/* Style the top header menu items */
+.header-top nav li {
+    margin: 0 10px;
+}
+
+/* Style the top header links */
+.header-top nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Style the bottom header */
+.header-bottom {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Style the h1 in the bottom header */
+.header-bottom h1 {
+    color: #333;
+}
