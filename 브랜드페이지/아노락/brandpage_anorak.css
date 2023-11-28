@@ -37,7 +37,9 @@ ol {
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-inline-start: 40px;
+    /* 실제 적용시 왼쪽에 여백이 적용되어 주석처리 하였음 본 페이지에서는 이 옵션이 적용되어있어도 여백이 적용되지 않음.  */
+    /* padding-inline-start: 40px; */
+    padding-inline-start: 0px;
 }
 .pathh ol {
     float: left;
@@ -426,4 +428,59 @@ img, fieldset {
 
 .prdList .spec li:nth-child(n+4) {
     width: 100%;
+}
+
+
+
+/* 페이지네이션  */
+.ec-base-paginate {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+    clear: both;
+}
+.ec-base-paginate img {
+    vertical-align: top;
+    width: 21px;
+}
+
+.ec-base-paginate ol {
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+    /* *display: inline;
+    *zoom: 1;
+    *margin: 0; */
+}
+
+.ec-base-paginate li:first-child {
+    margin-left: 0;
+}
+.ec-base-paginate li a.this {
+    padding-bottom: 0px;
+    border-bottom: 2px solid #555;
+    color: #495164;
+}
+.ec-base-paginate li {
+    display: inline-block;
+    margin: 0 0 0 -1px;
+    border: 1px solid #d7d5d5;
+    font-size: 12px;
+    color: #757575;
+    vertical-align: top;
+    /* *display: inline;
+    *zoom: 1; */
+}
+
+.ec-base-paginate li a {
+    display: block;
+    width: 20px;
+    padding: 3px 0 2px 0;
+    font-weight: bold;
+    color: #939393;
+    line-height: 14px;
+    font-size: 11px;
+    background: #fff;
 }
