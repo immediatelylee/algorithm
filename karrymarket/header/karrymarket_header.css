@@ -5608,3 +5608,10 @@ html[xmlns] .flexslider .slides {
     color: #000 !important;
     font-size: 14px !important;
 }
+
+
+.choice {
+    padding-top: 100px;
+}
+
+.main_bn {display:flex;}
