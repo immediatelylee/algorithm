@@ -11,6 +11,8 @@ var slides = document.querySelector('.slides'),
     isPaused = false, // Variable to track if the slideshow is paused
     // 페이지네이션
     SlideText = document.querySelector(".slideText");
+    // 재생버튼 padding-left를 변경하기 위함
+    toggleElement = document.querySelector('.pauseplay .toggle');
 
 console.log(SlideText)
 makeClone();
@@ -108,10 +110,14 @@ function toggleSlideshow() {
     if (isPaused) {
         isPaused = false; // If paused, resume the slideshow
         toggleBtn.textContent = '||'; // Change to play symbol
+
         autoSlide(); // Start automatic slideshow
     } else {
         isPaused = true; // If not paused, pause the slideshow
         toggleBtn.textContent = '▶'; // Change to pause symbol
+        
+
+        
         stopSlide(); // Stop the slideshow
     }
 }
