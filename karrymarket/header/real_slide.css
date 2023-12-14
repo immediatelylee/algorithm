@@ -10,7 +10,7 @@ li{list-style:none;}
 }
 .slides{
 	position: absolute;
-	left:0; top:0;	
+	
 }
 .slides.animated{
 	transition: 0.5s ease-out;
@@ -19,19 +19,21 @@ li{list-style:none;}
 	width: 1920px;
 	height: 610px;
 	background:#ccc;
-	float:left;
+	float:left;	
 }
 
 .slideText{
 	/* position: absolute;  수정본에서 마지막에 알려줌 오늘 문제였던거 */
 	bottom: 40.5%;
 	right: 114px;
+	font-size: 18px;
 }
 
 /* 구형컨트롤러 */
+
 .controls{
-	bottom:40.5%; /* Adjust the distance from the bottom as needed */
-    right: 114px; /* Adjust the distance from the right as needed */
+	bottom:15.5%; /* Adjust the distance from the bottom as needed */
+    right: 83px; /* Adjust the distance from the right as needed */
 	position: absolute;
 	text-align: right;
 	/* margin-top: 50px; */
@@ -40,14 +42,15 @@ li{list-style:none;}
 	display: flex;
 }
 
+/* 배경 원 */
 .controls a{
 	display: block;
 	background: #bbb5;
     color: white;
     padding: 9px;
 	padding-left: 12px;
-	width: 15px;
-	height: 15px;
+	width: 33px;
+	height: 33px;
     border-radius: 50%;
 	line-height: 12px;
     font-size: 13px;
@@ -63,8 +66,8 @@ li{list-style:none;}
 /* 재생, 일시정지 */
 .pauseplay {
     position: absolute;
-    bottom:40.5%; /* Adjust the distance from the bottom as needed */
-    right: 230px; /* Adjust the distance from the right as needed */
+    bottom:2.5%; /* Adjust the distance from the bottom as needed */
+    right: 141px; /* Adjust the distance from the right as needed */
 	display: flex;
 }
 
@@ -74,9 +77,9 @@ li{list-style:none;}
     background-color: #bbb5;
     color: white;
     padding: 9px;
-	padding-left: 12px;
-	width: 15px;
-	height: 15px;
+	padding-left: 9px;
+	width: 33px;
+	height: 33px;
     border-radius: 50%;
 	line-height: 12px;
     font-size: 13px;
@@ -107,6 +110,9 @@ a.prev {
 	
 	.slideText {
 	padding: 3px 12px;
+	/* 색상도 추가함. */
+	color: #90908F;
+
 	}
 	a.toggle {
 	right: 16px;
