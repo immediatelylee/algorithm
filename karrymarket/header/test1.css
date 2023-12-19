@@ -1,0 +1,331 @@
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,img {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+/* Reset some default styles */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 추가 검색창 이상하게 나와서 */
+img,fieldset {
+    border: none;
+    vertical-align: top;
+}
+
+
+
+/* 추가 ---- submenu가 잘안나와서  */
+a {
+    text-decoration: none;
+    color: #000;
+    outline: none
+}
+
+a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+a:active {
+    text-decoration: none;
+}
+/* 추가 ---- */
+
+
+/* Style the top header */
+#hd_top {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.left-nav {
+    margin-left: 100px;
+}
+
+/* Style the navigation menu in the top header */
+#hd_top nav ul {
+    display: flex;
+}
+
+/* Style the top header menu items */
+#hd_top nav li {
+    margin: 10px 0px;
+}
+/* 가장 오른쪽 메뉴 아이템에만 오른쪽 여백을 추가 */
+#hd_top nav li:last-child {
+    margin-right: 300px;
+}
+
+/* Style the top header links */
+#hd_top nav a {
+    text-decoration: none;
+    color: white;
+    font-weight:bold;
+    margin-top: 10px;
+    /* 패딩 5px추가 */
+    padding: 5px;
+}
+#header {
+    position: relative;
+    z-index: 999;
+    background: #fff
+}
+
+#header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1400px;
+    min-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+#header .hd_left {
+    display: flex;
+    align-items: center;
+}
+
+#header .hd_subMenu {
+    width: 75px;
+    margin-left: -12px;
+    padding: 68px 20px 64px;
+}
+
+#header .hd_subMenu .menu {
+    display: block;
+}
+
+#header .hd_subMenu.open .menu {
+    display: none;
+}
+
+#header .hd_subMenu .close {
+    display: none;
+}
+
+#header .hd_subMenu.open .close {
+    display: block;
+    width: 25px;
+    margin: 0 auto;
+}
+
+#header .hd_subMenu:hover {
+    cursor: pointer;
+}
+
+#header .hd_subMenu:hover #hd_subMenu {
+    display: block;
+}
+
+#header .logo_box {
+    display: flex;
+    align-items: center;
+    padding: 40px 0 36px 29px;
+}
+
+#header .hd_logo {
+    display: flex;
+    align-items: center;
+}
+
+#header .hd_logo:after {
+    content: '';
+    display: block;
+    height: 33px;
+    width: 2px;
+    background: #000;
+    margin: 0 25px 0 26.5px;
+}
+
+#header .event_logo {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0
+}
+
+#header .hd_menu {
+    display: flex;
+}
+
+#header .hd_menu > li {
+    margin-right: 29px;
+    line-height: 0;
+}
+
+#header .hd_menu > li a {
+    font-size: 18px;
+    font-weight: bold
+}
+
+#header .hd_right {
+    display: flex;
+    align-items: center;
+    margin-right: 18px
+}
+
+#header #searchBarForm {
+    margin-right: 5px;
+    outline: none;
+}
+
+#header .hd_right .xans-layout-searchheader {
+}
+
+#header .hd_right .xans-layout-searchheader fieldset {
+    border-bottom: 1px solid #888;
+}
+
+#header .hd_right .xans-layout-searchheader #keyword {
+    width: 146px;
+    height: 32px;
+    padding: 0 0 0 4px;
+    border: 0;
+    outline: none;
+    line-height: 32px;
+    font-size: 13px;
+    color: #000;
+    background: #fff;
+    font-family: 'Open Sans','Apercu Pro','Noto Sans KR','Malgun Gothic','Nanum Gothic',Verdana,Dotum,AppleGothic,sans-serif;
+}
+
+#header .hd_right a {
+    display: block;
+    width: 26px;
+    margin-left: 10px;
+}
+
+#header .hd_right a img {
+    width: 100%;
+}
+
+#keyword + input {
+    margin-right: -5px;
+    width: 30px
+}
+
+#hd_subMenu {
+    line-height: unset;
+    display: none;
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 6.7vw;
+    z-index: 9999;
+}
+
+#hd_subMenu .inner {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 34px 0;
+}
+
+#hd_subMenu .hd_sub_left {
+    display: flex;
+    flex-direction: column;
+}
+
+#hd_subMenu .hd_sub_left .hd_sub_top {
+    display: flex;
+}
+
+#hd_subMenu .hd_sub_left .hd_sub_top li {
+    margin-right: 35px;
+}
+
+#hd_subMenu .hd_sub_left .hd_sub_top li.special a {
+    color: #fc0716
+}
+
+#hd_subMenu .hd_sub_left .hd_sub_top li a {
+    font-size: 21px;
+    font-weight: bold
+}
+
+#hd_subMenu .hd_sub_left .hd_sub_btm {
+    display: flex;
+    margin-top: 36px;
+}
+
+#hd_subMenu .hd_sub_left .hd_sub_btm > li {
+    margin-right: 86px;
+}
+
+#hd_subMenu .hd_sub_left .hd_sub_btm > li > a {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#hd_subMenu .hd_sub_left .hd_sub_btm > li > ul {
+    margin-top: 15px;
+}
+
+#hd_subMenu .hd_sub_left .hd_sub_btm > li > ul > li {
+    margin-bottom: 12px;
+}
+
+#hd_subMenu .hd_sub_left .hd_sub_btm > li > ul > li > a {
+    font-size: 14px;
+    color: #888;
+}
+
+#hd_subMenu .hd_sub_right {
+    margin: 7px -30px 0 0;
+}
+
+#hd_subMenu .hd_sub_right > ul {
+    display: flex;
+}
+
+#hd_subMenu .hd_sub_right > ul > li {
+    margin-left: 43px;
+}
+
+#hd_subMenu .hd_sub_right > ul > li p {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    cursor: default;
+}
+
+#hd_subMenu .hd_sub_right > ul > li > ul > li {
+    margin-bottom: 17px;
+}
+
+#hd_subMenu .hd_sub_right > ul > li > ul > li > a {
+    font-size: 14px;
+    color: #888
+}
+
+input,select,textarea {
+    font-size: 100%;
+    color: #353535;
+    vertical-align: middle;
+}
+
+legend {
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 0;
+    height: 0;
+    line-height: 0;
+}
