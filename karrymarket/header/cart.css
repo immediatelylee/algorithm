@@ -1,0 +1,30 @@
+.xans-order-basketpackage .ec-base-table td.thumb img {
+    max-width: 80px;
+}
+.ec-base-table img {
+    vertical-align: middle;
+}
+.xans-order-basketpackage .ec-base-table td.button a {
+    width: 90px;
+    margin: 1px 0;
+}
+[class^='btnNormal']:not(.disabled):hover {
+    background-color: #f3f3f3;
+}
+[class^='btnNormal'], a[class^='btnNormal'] {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 5px 8px;
+    border: 1px solid #ececec;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    vertical-align: middle;
+    word-spacing: -0.5px;
+    text-align: center;
+    white-space: nowrap;
+    color: #222;
+    background-color: #fff;
+}
