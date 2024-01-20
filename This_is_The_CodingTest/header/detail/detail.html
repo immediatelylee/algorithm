@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 상세페이지</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        
+        .product-image {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .product-description {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .product-info {
+            margin-bottom: 20px;
+        }
+
+        .product-buttons {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .quantity-input {
+            width: 40px;
+            text-align: center;
+        }
+
+        .underline {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="product-image">
+            <img src="상품이미지URL" alt="상품 이미지">
+        </div>
+        <div class="product-description">
+            <div class="product-info">
+                <h1>브랜드명</h1>
+                <h2>상품명</h2>
+                <p>할인률: 10%</p>
+                <p>할인된 가격: $90</p>
+                <p>원래 가격: $100</p>
+                <p>배송 여부: 예</p>
+                <p>택배비: $5</p>
+                <p>코멘트: 이 상품은 훌륭합니다.</p>
+                <div class="underline">
+                    <h2>상품명</h2>
+                    <label for="quantity">수량:</label>
+                    <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+                </div>
+            </div>
+            <div class="product-buttons">
+                <a href="#" class="product-button">바로 구매</a>
+                <a href="#" class="product-button">장바구니</a>
+                <a href="#" class="product-button">관심 상품</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const quantityInput = document.getElementById("quantity");
+        const totalPrice = document.getElementById("total-price");
+
+        quantityInput.addEventListener("input", () => {
+            const price = 90; // 가격을 원래 가격에서 할인된 가격으로 변경해야 합니다.
+            const quantity = parseInt(quantityInput.value);
+            const total = price * quantity;
+            totalPrice.textContent = `$${total}`;
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
