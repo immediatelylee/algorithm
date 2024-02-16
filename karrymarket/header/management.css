@@ -1,0 +1,319 @@
+div {
+    display: block;
+}
+
+
+#content {
+    min-height: 750px;
+    min-width: 960px;
+    padding: 24px 24px 100px;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.headingArea {
+    position: relative;
+    margin: 0 0 16px;
+}
+
+.headingArea .mTitle {
+    margin-top: 0;
+    position: relative;
+    margin: 18px 0 8px;
+}
+
+.headingArea h1 {
+    position: relative;
+    display: inline-block;
+    padding: 0 2px 0 0;
+    height: 32px;
+    line-height: 32px;
+    color: #1b1e26;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.section {
+    margin: 0 0 24px;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+.mBoard table {
+    border-top: 1px solid #d9dadc;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: gray;
+}
+
+caption {
+    display: none;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.mBoard.gSmall th {
+    width: 135px;
+}
+
+.mBoard tbody th {
+    border: 1px solid #d9dadc;
+    text-align: left;
+}
+
+.mBoard th {
+    font-weight: normal;
+    background-color: #fafafb;
+}
+.mBoard th, .mBoard td {
+    padding: 9px 9px 7px;
+    vertical-align: top;
+}
+th, td {
+    border: 0;
+    word-wrap: break-word;
+}
+.fSelect {
+    display: inline;
+    height: 28px;
+    margin: 0;
+    padding: 0 24px 0 8px;
+    border-radius: 3px;
+    border: 1px solid #d6dae1;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #fff url('//img.echosting.cafe24.com/ec/v2/ico_select.png') no-repeat right 7px center;
+}
+option {
+    font-weight: normal;
+    display: block;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+    white-space: nowrap;
+}
+
+element.style {
+    width: 400px;
+}
+input.fText {
+    max-width: 100%;
+    height: 28px;
+    padding: 0 8px;
+    border: 1px solid #d6dae1;
+    border-radius: 3px;
+    box-sizing: border-box;
+    line-height: 28px;
+    outline: 0 none;
+}
+label.eSelected {
+    font-weight: bold;
+}
+label.gLabel {
+    display: inline-block;
+    padding: 0 24px 0 0;
+    outline: 0 none;
+}
+.mBoard tfoot > tr > th, .mBoard tbody > tr > td {
+    border-top-width: 0;
+}
+.mButton.gCenter {
+    position: relative;
+    text-align: center;
+}
+.section > .mButton .btnSearch, .section > .mButton .btnSearch span, .section > form > .mButton .btnSearch, .section > form > .mButton .btnSearch span, .optionArea > .mButton .btnSearch, .optionArea > .mButton .btnSearch span, .optionArea > .optionWrap > .mButton .btnSearch, .optionArea > .optionWrap > .mButton .btnSearch span {
+    height: 36px;
+}
+.mButton a:first-child {
+    margin-left: 0;
+}
+.section > .mButton .btnSearch span, .section > form > .mButton .btnSearch span, .optionArea > .mButton .btnSearch span, .optionArea > .optionWrap > .mButton .btnSearch span {
+    min-width: 72px;
+    font-size: 13px;
+    line-height: 34px;
+}
+.btnSearch span {
+    padding: 0 8px;
+    border: 1px solid transparent;
+    font-size: 12px;
+    line-height: 26px;
+    color: #fff;
+    background-color: #444b59;
+}
+.btnNormal, .btnNormal span, .btnCtrl, .btnCtrl span, .btnDate, .btnDate span, .btnGeneral, .btnGeneral span, .btnStrong, .btnStrong span, .btnSubmit, .btnSubmit span, .btnEm, .btnEm span, .btnSearch, .btnSearch span, .btnToggle {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border-radius: 3px;
+} 
+.mBoard.gSmall td {
+    width: auto;
+}
+.mBoard tfoot > tr > th, .mBoard tbody > tr > td {
+    border-top-width: 0;
+}
+.mButton {
+    margin: 16px 0 0;
+    text-align: right;
+}
+.mTitle {
+    position: relative;
+    margin: 18px 0 8px;
+}
+.mTitle h2 {
+    display: inline-block;
+    padding: 0 5px 0 0;
+    color: #1b1e26;
+    font-size: 16px;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+.mTitle:after {
+    content: "";
+    display: block;
+    clear: both;
+    position: absolute;
+}
+.section:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.mButton:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* mState */
+.mState { min-height:46px; margin:8px 0 -1px; padding:8px; border:1px solid #d9dadc; box-sizing:border-box; background-color:#fff; }
+.mState:after { content:""; display:block; clear:both; }
+.mState h2.title { float:left; padding:0 5px 0 0; font-size:16px; font-weight:normal; }
+
+.mState .gLeft { float:left; }
+.mState .gRight { float:right; }
+.mState .total { float:left; margin:6px 8px 0 0; }
+
+.mState .total strong { color:#3971ff; }
+.mState .total strong.txtEm { color:#1b87d4; }
+.mState .bgColor { float:left; padding:0 5px 0 0; }
+.mState .bgColor span { display:inline-block; color:#1c1c1c; font-size:11px; letter-spacing:0; padding:0 15px 0 0; }
+.mState .bgColor span span { margin:-2px 5px 0 0; width:14px; height:14px; padding:0; vertical-align:middle; }
+.mState .bgColor .bgFinish span { background:#b6ceed; }
+.mState .bgColor .bgNostock span { background:#ffe3ef; }
+.mState .bgColor .bgNosend span { background:#f3c095; }
+.mState .bgColor .bgDelete span { background:#bebebe; }
+.mState .bgColor .bgChange span { background:#f06e6f; }
+.mBoard .mState { margin-top:0; }
+.mTitle + .mState.gMerge { position:relative; z-index:1; float:right; margin-top:-45px; border:0; background-color:transparent; }
+.mState label + select { margin-left:6px; }
+.mState label { display:inline-block; }
+  /* typeFooter */
+.mState.typeFooter { margin:-1px 0 0; }
+
+.mCtrl.typeHeader {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -1px;
+}
+
+.mCtrl {
+    min-height: 46px;
+    padding: 8px;
+    border: 1px solid #d9dadc;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #fff;
+}
+
+.mCtrl .gLeft {
+    float: left;
+    text-align: left;
+}
+
+.btnNormal, .btnNormal span {
+    height: 28px;
+}
+
+.btnNormal span {
+    padding: 0 8px;
+    border: 1px solid #aeb4c6;
+    font-size: 12px;
+    line-height: 26px;
+    color: #1b1e26;
+    font-weight: normal;
+    background-color: #fff;
+}
+
+.btnNormal em.icoDel {
+    width: 8px;
+    height: 10px;
+    background-position: 0 -150px;
+}
+
+.btnNormal em.icoDel, .btnCtrl em.icoDel, .btnNormal em.icoView, .btnNormal em.icoCopy, .btnNormal em.icoList, .btnNormal em.icoRefresh, .btnNormal em.icoURL, .btnNormal em.icoReverse, .btnNormal em.icoResize, .btnNormal em.icoStar, .btnNormal em.icoXls, .btnNormal em.icoDoc, .btnNormal em.icoPpt, .btnNormal .icoPdf, .btnNormal em.icoHwp, .btnNormal em.icoText, .btnNormal em.icoZip, .btnNormal em.icoJpg, .btnNormal em.icoPng, .btnNormal em.icoGif, .btnNormal em.icoPrint {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    padding: 0;
+    vertical-align: -1px;
+    line-height: 0;
+    background: url('//img.echosting.cafe24.com/suio/ko_KR/sfix_icon_button2.png') 0 0 no-repeat;
+}
+
+em {
+    font-style: italic;
+}
+html:lang(ko) .btnNormal span {
+    font-size: 13px;
+}
+
+.mCtrl .gRight {
+    float: right;
+    text-align: right;
+}
+.btnCtrl, .btnCtrl span {
+    height: 28px;
+}
+html:lang(ko) .btnCtrl span {
+    font-size: 13px;
+}
+.btnCtrl span {
+    padding: 0 8px;
+    border: 1px solid transparent;
+    font-size: 12px;
+    line-height: 26px;
+    color: #fff;
+    font-weight: normal;
+    background-color: #444b59;
+}
