@@ -1,8 +1,17 @@
 div {
     display: block;
 }
-
-
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, img {
+    margin: 0;
+    padding: 0;
+}
+body, code {
+    font-size: 12px;
+    font-family: "Noto Sans KR","맑은 고딕","malgun gothic","Apple SD Gothic Neo",sans-serif;
+    color: #1b1e26;
+    -webkit-text-size-adjust: none;
+    background-color: #f4f5f8;
+}
 #content {
     min-height: 750px;
     min-width: 960px;
@@ -59,8 +68,10 @@ table {
     border-collapse: separate;
     box-sizing: border-box;
     text-indent: initial;
-    border-spacing: 2px;
+    border-spacing: 0px;
     border-color: gray;
+    border-collapse: collapse;
+
 }
 
 caption {
@@ -289,6 +300,7 @@ label.gLabel {
     vertical-align: -1px;
     line-height: 0;
     background: url('//img.echosting.cafe24.com/suio/ko_KR/sfix_icon_button2.png') 0 0 no-repeat;
+    background-position: 0 -150px;
 }
 
 em {
@@ -316,4 +328,166 @@ html:lang(ko) .btnCtrl span {
     color: #fff;
     font-weight: normal;
     background-color: #444b59;
+}
+.mCtrl:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+colgroup {
+    display: table-column-group;
+}
+.mBoard .chk {
+    width: 35px;
+}
+
+col {
+    display: table-column;
+}
+.mBoard .date {
+    width: 100px;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.mBoard thead th {
+    border: 1px solid #d9dadc;
+    text-align: center;
+    vertical-align: middle;
+}
+table input[type="checkbox"], table .allChk[type="checkbox"], table .rowChk[type="checkbox"] {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    outline: none;
+    background-image: url('//img.echosting.cafe24.com/ec/v2/sfix_icon_form.png');
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    appearance: none;
+}
+html:lang(ko) input, html:lang(ko) select, html:lang(ko) textarea, html:lang(ko) button {
+    font-size: 13px;
+    letter-spacing: -0.5px;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    opacity: 1;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('//img.echosting.cafe24.com/ec/v2/sfix_icon_form.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    outline: 0;
+}
+
+.mBoard .array {
+    display: inline-block;
+    cursor: pointer;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.mBoard .array button {
+    overflow: hidden;
+    display: inline-block;
+    width: 7px;
+    height: 4px;
+    margin: 0 0 0 5px;
+    vertical-align: 4px;
+    white-space: nowrap;
+    text-indent: 150%;
+    font-size: 0;
+    line-height: 0;
+    background: url("//img.echosting.cafe24.com/suio/sfix_btn.png") no-repeat 0 -21px;
+}
+
+button {
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.mBoard.gCellSingle td {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.mBoard tfoot > tr > th, .mBoard tbody > tr > td {
+    border-top-width: 0;
+}
+
+.mBoard tbody td {
+    border: 1px solid #d9dadc;
+}
+
+a.txtLink {
+    text-decoration: underline;
+    color:black
+}
+
+.mBoard .left {
+    text-align: left;
+}
+
+.mBoard .right {
+    text-align: right;
+}
+
+.mBoard .center {
+    text-align: center;
+}
+
+html:lang(ko) .mBoard thead th, html:lang(ko) .mBoard thead ~ tbody td, html:lang(ko) .mBoard thead ~ tbody td a, html:lang(ko) .mBoard thead ~ tfoot th, html:lang(ko) .mBoard thead ~ tfoot td, html:lang(ko) .mBoard.typeList tbody th, html:lang(ko) .mBoard.typeList tbody td, html:lang(ko) .mBoard.typeList tbody td a, html:lang(ko) .mBoard .empty {
+    color: #222;
+    font-family: "Nanum Gothic","맑은 고딕","malgun gothic","Apple SD Gothic Neo",sans-serif;
+}
+.mPaginate {
+    margin: 16px 0 0;
+    text-align: center;
+}
+
+
+li {
+    list-style: none;
+}
+.mPaginate li a, .mPaginate strong {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #444b59;
+    text-decoration: none;
+}
+.mPaginate ol, .mPaginate li {
+    display: inline-block;
+    margin: 0 4px;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+}
+.mPaginate a:active, .mPaginate a:focus, .mPaginate strong {
+    color: #fff;
+    background-color: #3971ff;
+    font-weight: bold;
+
+}
+strong {
+    font-weight: bold;
 }
