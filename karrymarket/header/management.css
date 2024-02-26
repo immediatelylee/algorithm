@@ -491,3 +491,27 @@ li {
 strong {
     font-weight: bold;
 }
+
+/* addpage */
+.btnSubmit span {
+    min-width: 102px;
+    padding: 0 16px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    color: #fff;
+    line-height: 38px;
+    background-color: #3971ff;
+}
+.btnSubmit, .btnSubmit span {
+    height: 40px;
+}
+
+.btnEm span {
+    min-width: 102px;
+    padding: 0 16px;
+    border: 1px solid #3971ff;
+    font-size: 14px;
+    line-height: 38px;
+    color: #3971ff;
+    background-color: #fff;
+}
