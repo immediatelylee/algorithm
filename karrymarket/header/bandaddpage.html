@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./management.css">
+</head>
+<body>
+    <div id="content">
+        <div class="headingArea">
+            <div class="mTitle"><a href="#none" class="btnGoBack" id="ec_move_to_back_btn" data-setting-type="product"></a>
+                <h1>브랜드 관리</h1>
+            
+            <div class="mBreadcrumb" style="display: none;">
+                <ol>
+                    <li class="home"><a href="#none">홈</a></li>
+                    <li>상품관리</li>
+                    <li>판매분류 관리</li>
+                    <li class="now" title="현재 페이지">브랜드 관리</li>
+                </ol>
+            </div>
+        </div>
+        <div class="section" id="QA_setting1">
+            <div class="mTitle">
+                <h2>기본정보</h2>
+            </div>
+            <div class="mBoard gSmall">
+                <form name="brand_value_form" action="/exec/admin/shop1/product/salesbrandregister" method="post" id="brand_value_form">
+                <input type="hidden" name="cf00" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJtIjoiY2l2aWxsaWFuMSIsInMiOiJhOTI0NjY2N2FiMDg5YmMzMzFkODMzNTJmZTBkNGYwZiIsInQiOjE3MDg0Mzc1NjYsInIiOiJjaXZpbGxpYW4xLmNhZmUyNC5jb20ifQ.1b4VZLAFbiHLoLs4N1gSXnGuk4_8-QzWKWo9nkyGGYyYk3T7JJqjZYonStwOJaO4QMOguXEyMRxYIs46Hu9n5w">            <table border="1" summary="">
+                <caption>기본정보</caption>
+                <tbody>
+                    <tr>
+                        <th scope="row">브랜드명 <strong class="icoRequired">필수</strong></th>
+                        <td>
+                            <div class="gIcoShop">
+                                <span title="쇼핑몰별" class="icoShop eMultiShop" style="display: none;">쇼핑몰별</span>
+                                <input type="text" name="brand_name" placeholder="예시) 브랜드명" id="brand_name" value="" class="fText" style="width:200px;" fw-label="브랜드명" fw-filter="isMaxByte[50]&amp;isFill">
+                                                        </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">브랜드코드</th>
+                        <td>자동생성<input type="hidden" name="brand_code" value=""></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">사용여부</th>
+                        <td>
+                                                        <label class="gLabel eSelected"><input type="radio" name="use_brand" value="T" id="eRadioUseBtnT" checked="checked" class="fChk"> 사용함</label>
+                                <label class="gLabel"><input type="radio" name="use_brand" value="F" id="eRadioUseBtnF" class="fChk"> 사용안함</label>
+                                                </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">검색어설정 <div class="cTip" code="PR.SL.BR.30"><div class="mTooltip gLarge">
+
+        <div class="tooltip" style="z-index : 1; ">
+            <div class="content"></div>
+            <span class="edge"></span>
+        </div>
+    </div>
+    </div></th>
+                        <td>
+                            <input type="text" id="search_keyword" name="search_keyword" class="fText" value="" style="width:500px;" fw-label="검색어설정" fw-filter="isMaxByte[200]">
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+                </form>
+            </div>
+            <!-- 수정 페이지시 노출 -->
+                </div>
+        <div class="mButton gCenter">
+            <a href="#none" class="btnSubmit" id="eSubmit"><span>등록</span></a>
+            <a href="/disp/admin/shop1/product/salesbrandlist" class="btnEm" id="eCancel"><span>취소</span></a>
+        </div>
+    </div>
+</body>
+</html>
