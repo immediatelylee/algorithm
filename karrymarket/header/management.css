@@ -6,7 +6,7 @@ html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form
     padding: 0;
 }
 body, code {
-    font-size: 12px;
+    font-size: 13px;
     font-family: "Noto Sans KR","맑은 고딕","malgun gothic","Apple SD Gothic Neo",sans-serif;
     color: #1b1e26;
     -webkit-text-size-adjust: none;
