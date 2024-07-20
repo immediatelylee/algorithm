@@ -1,0 +1,124 @@
+<div id="QA_register3" class="section">
+    <div class="mToggleBar eToggle selected">
+        <h2>표시 설정</h2>
+        <div class="ctrl">
+            <label class="gLabel"><input type="checkbox"> 항상열기</label>
+            <span><button type="button"><em>접기</em></button></span>
+        </div>
+    </div>
+    <div class="toggleArea" style="display:block;">
+        <div class="mBoard gSmall gGuide">
+            <table border="1" summary="">
+            <caption>표시 설정</caption>
+            <tbody>
+                <tr>
+                    <th scope="row" rowspan="2">표시상태설정</th>
+                    <td>
+                        <div class="gIcoShop">
+                            <span class="icoShop" title="쇼핑몰별">쇼핑몰별</span>
+                            <span class="icoDot"></span>
+                            <strong class="gWidth wPrdRegShopStatus">진열상태</strong>
+                            <label class="gLabel"><input type="radio" name="is_display[1]" class="fChk" value="T"> 진열함</label>
+                            <label class="gLabel eSelected"><input type="radio" name="is_display[1]" class="fChk" value="F" checked="checked"> 진열안함</label>
+                                                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="gIcoShop">
+                            <span class="icoShop" title="쇼핑몰별">쇼핑몰별</span>
+                            <span class="icoDot"></span>
+                            <strong class="gWidth wPrdRegShopStatus">판매상태</strong>
+                            <label class="gLabel"><input type="radio" name="selling_status[1]" class="fChk" value="T"> 판매함</label>
+                            <label class="gLabel eSelected"><input type="radio" name="selling_status[1]" class="fChk" value="F" checked="checked"> 판매안함</label>
+                                                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">상품분류선택</th>
+                    <td>
+                        
+                        <div class="mSearchSelect typeCategory gDouble">
+                            <table border="1" summary="">
+                            <caption>분류</caption>
+                            <colgroup>
+                                <col style="width:25%" span="4">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="center">대분류</th>
+                                    <th scope="col" class="center">중분류</th>
+                                    <th scope="col" class="center">소분류</th>
+                                    <th scope="col" class="center">상세분류</th>
+                                </tr>
+                            </thead>
+                            <tbody class="_category_select_body">
+                                <tr>
+                                    <td>
+                                        <div class="list ">
+                                            <ul class="_category_1">
+                                                                                                                                                <li class="">
+                                                    (대분류) 미진열 &gt;                                                    <input type="hidden" class="_category_no" value="23" hashtag="">
+                                                </li>
+
+                                                                                                                                                <li class="_next">
+                                                    (대분류) Outerwear &gt;                                                    <input type="hidden" class="_category_no" value="24" hashtag="">
+                                                </li>
+
+                                                                                                                                                <li class="_next selected">
+                                                    (대분류) Tops &gt;                                                    <input type="hidden" class="_category_no" value="25" hashtag="">
+                                                </li>
+
+                                                                                                                                                <li class="">
+                                                    (대분류) Dresses &gt;                                                    <input type="hidden" class="_category_no" value="26" hashtag="">
+                                                </li>
+
+                                                                                                                                                <li class="_next">
+                                                    (대분류) Bottoms &gt;                                                    <input type="hidden" class="_category_no" value="27" hashtag="">
+                                                </li>
+
+                                                                                                                                                <li class="">
+                                                    (대분류) Accessories &gt;                                                    <input type="hidden" class="_category_no" value="28" hashtag="">
+                                                </li>
+
+                                                                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="list">
+                                            <ul class="_category_2"><li class="_next selected">(중분류) Tees &gt;<input type="hidden" class="_category_no" value="32" hashtag="null"></li><li class="">(중분류) Shirts &gt;<input type="hidden" class="_category_no" value="33" hashtag="null"></li></ul>
+                                        </div>
+                                    </td>
+                                <td>
+                                    <div class="list">
+                                        <ul class="_category_3"><li class="_next selected">(소분류) Short Sleeve &gt;<input type="hidden" class="_category_no" value="36" hashtag="null"></li><li class="_next">(소분류) Long Sleeve &gt;<input type="hidden" class="_category_no" value="37" hashtag="null"></li></ul>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="list">
+                                        <ul class="_category_4"><li class="selected">(상세분류) Cropped<input type="hidden" class="_category_no" value="38" hashtag="null"></li><li class="">(상세분류) Graphic Tees<input type="hidden" class="_category_no" value="39" hashtag="null"></li></ul>
+                                    </div>
+                                </td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        <p class="gDouble">
+                            <span class="icoDot"></span>
+                            <strong class="gWidth wPrdCategory">선택된 상품분류</strong>
+                            <span class="_product_category_none" style="display: none;">
+                            </span>
+                            <span style="" class="_product_category_checked">
+                                <input type="hidden" name="category_product[group1][38]" class="_selected_category_no" value="38">
+                                <span class="txtLight txtLess">(대분류) Tops  &gt; (중분류) Tees  &gt; (소분류) Short Sleeve  &gt; (상세분류) Cropped</span>
+                                <a href="#none" class="btnNormal _remove_selected_category"><span><em class="icoDel"></em> 삭제</span></a>
+                            </span>
+                            <input type="hidden" name="checked_category">
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
